@@ -85,4 +85,8 @@ module.exports = class ClientBase extends Client {
       }
     })();
   }
+  
+  async getConfig() {
+        return this.config;
+    }
 }
