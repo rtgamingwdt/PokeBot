@@ -4,6 +4,8 @@ const { config } = require("dotenv");
 
 const { connect } = require("mongoose");
 
+const chalk = require("chalk")
+
 const { readdirSync } = require("fs");
 
 const { REST } = require("@discordjs/rest");
@@ -36,13 +38,13 @@ module.exports = class ClientBase extends Client {
     if (uri) {
       await connect(uri)
         .then(() => {
-          console.log("CONNECTED TO DATABASE!");
+          console.log(chalk.red("CONNECTED TO DATABASE!"));
         })
         .catch((err) => {
           console.log(err);
         });
     } else {
-      console.log("DATABASE URI NOT FOUND");
+      console.log(chalk.red("DATABASE URI NOT FOUND"));
     }
   }
 
