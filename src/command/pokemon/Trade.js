@@ -3,7 +3,7 @@ const Command = require("../../base/Command");
 const {
     SlashCommandBuilder
 } = require("@discordjs/builders");
-const { MessageEmbed, MessageButton, MessageActionRow } = require("discord.js");
+const { MessageEmbed, MessageButton, MessageActionRow, MessageComponentInteraction } = require("discord.js");
 const Database = require("../../base/Database");
 
 module.exports = new class Ping extends Command {
@@ -22,6 +22,17 @@ module.exports = new class Ping extends Command {
     async execute(client, interaction) {
         const embed = new MessageEmbed();
         let button;
+        const pokemon1 = [];
+        const pokemon2 = [];
+
+        if(interaction.options.getUser("trainer").id == interaction.user.id) return interaction.reply({
+            embeds: [
+                new MessageEmbed()
+                .setTitle("I don't understand")
+                .setDescription("You cannot trade with yourself")
+                .setColor("RED")
+            ]
+        });
 
         const trainer1 = await Database.getUserData(interaction.user.id);
 
@@ -36,6 +47,22 @@ module.exports = new class Ping extends Command {
             });
         }
 
+        trainer1.pokemon.some((element) => {
+             if(element.name == interaction.options.getString("pokemon")) {
+                 pokemon1.push(element.name);
+             }
+         });
+
+         if(pokemon1.length == 0) {
+             return interaction.reply({
+                 embeds: [
+                     new MessageEmbed()
+                     .setDescription(`You don't have the pokemon called ${interaction.options.getString('pokemon')}`)
+                     .setColor("RED")
+                 ]
+             })
+         }
+
         const trainer2 = await Database.getUserData(interaction.options.getUser("trainer").id);
 
         if (!trainer2) {
@@ -49,12 +76,27 @@ module.exports = new class Ping extends Command {
             });
         }
 
-        trainer1.pokemon.some((element) => {
-            if(element.name == interaction.options.getString("pokemon")) {
-                console.log(true);
-            }
-        });
+        // await Database.tradePokemon(trainer1.UserID, trainer2.UserID, "camerupt-mega", "swampert-mega")
 
-        await Database.tradePokemon(trainer1.UserID, trainer2.UserID, "camerupt-mega", "swampert-mega")
+        interaction.reply({
+            embeds: [
+                new MessageEmbed()
+                .setDescription(`${interaction.user.tag}, wants to trade with ${interaction.options.getUser("trainer").tag}`)
+                .setColor("YELLOW")
+            ],
+            comonents: [
+                new MessageActionRow()
+                .addComponents([
+                    new MessageButton()
+                    .setCustomId("ACCEPT_TRADE")
+                    .setLabel("Accept")
+                    .setStyle("SUCCESS"),
+                new MessageButton()
+                    .setCustomId("DECLINE_TRADE")
+                    .setLabel("Decline")
+                    .setStyle("DANGER")
+                ])
+            ]
+        })
     }
 }
