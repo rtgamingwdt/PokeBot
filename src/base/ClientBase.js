@@ -1,38 +1,20 @@
-const {
-  Client,
-  Collection,
-  Intents
-} = require("discord.js");
+const { Client, Collection, Intents } = require("discord.js");
 
-const {
-  config
-} = require("dotenv");
+const { config } = require("dotenv");
 
-const {
-  connect
-} = require("mongoose");
+const { connect } = require("mongoose");
 
-const {
-  readdirSync
-} = require("fs");
+const { readdirSync } = require("fs");
 
-const {
-  REST
-} = require("@discordjs/rest");
+const { REST } = require("@discordjs/rest");
 
-const {
-  Routes
-} = require('discord-api-types/v9');
+const { Routes } = require("discord-api-types/v9");
 const Database = require("./Database");
 
 module.exports = class ClientBase extends Client {
-
   constructor(options = {}) {
     super({
-      intents: [
-        Intents.FLAGS.GUILDS,
-        Intents.FLAGS.GUILD_MESSAGES
-      ]
+      intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
     });
 
     config();
@@ -52,11 +34,13 @@ module.exports = class ClientBase extends Client {
 
   async connectDB(uri) {
     if (uri) {
-      await connect(uri).then(() => {
-        console.log("CONNECTED TO DATABASE!")
-      }).catch((err) => {
-        console.log(err);
-      })
+      await connect(uri)
+        .then(() => {
+          console.log("CONNECTED TO DATABASE!");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     } else {
       console.log("DATABASE URI NOT FOUND");
     }
@@ -89,14 +73,18 @@ module.exports = class ClientBase extends Client {
       }
     }
 
-    const rest = new REST({ version: '9' }).setToken(this.config.TOKEN);
+    const rest = new REST({ version: "9" }).setToken(this.config.TOKEN);
 
     (async () => {
       try {
-        console.log('Started refreshing application (/) commands.');
-        await rest.put(                     //CLIENT ID             //GUILD ID
-          Routes.applicationGuildCommands("941785047692898354", "953072048576536596"),
-          { body: this.commandArray },
+        console.log("Started refreshing application (/) commands.");
+        await rest.put(
+          //CLIENT ID             //GUILD ID
+          Routes.applicationGuildCommands(
+            "941785047692898354",
+            "953072048576536596"
+          ),
+          { body: this.commandArray }
         );
 
         // await rest.get(Routes.applicationCommands("941785047692898354"))
@@ -109,7 +97,7 @@ module.exports = class ClientBase extends Client {
         //     return Promise.all(promises);
         //   });
 
-        console.log('Successfully reloaded application (/) commands.');
+        console.log("Successfully reloaded application (/) commands.");
       } catch (error) {
         console.error(error);
       }
@@ -123,4 +111,4 @@ module.exports = class ClientBase extends Client {
   // async getDatabase() {
   //   return this.database;
   // }
-}
+};

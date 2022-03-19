@@ -1,24 +1,21 @@
 const Command = require("../../base/Command");
 
-const {
-  SlashCommandBuilder
-} = require("@discordjs/builders");
+const { SlashCommandBuilder } = require("@discordjs/builders");
 const { MessageEmbed } = require("discord.js");
 const Database = require("../../base/Database");
 
-module.exports = new class Ping extends Command {
-
+module.exports = new (class Ping extends Command {
   constructor() {
     super(
       new SlashCommandBuilder()
         .setName("pokemon")
         .setDescription("pokemon")
         .setDefaultPermission(true)
-    )
+    );
   }
 
   async execute(client, interaction) {
-    const embed = new MessageEmbed()
+    const embed = new MessageEmbed();
     const { data } = await Database.getRandomPokemon();
     embed.setTitle(`${data.name}`);
     embed.addField("Base Experience", `${data.base_experience}`, true);
@@ -32,9 +29,7 @@ module.exports = new class Ping extends Command {
     });
 
     return interaction.reply({
-      embeds: [
-        embed
-      ]
-    })
+      embeds: [embed],
+    });
   }
-}
+})();

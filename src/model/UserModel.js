@@ -1,6 +1,9 @@
-const { model, Schema } = require('mongoose');
+const { model, Schema } = require("mongoose");
 
-module.exports = model("UserData", new Schema({
+module.exports = model(
+  "UserData",
+  new Schema({
     UserID: String,
-    pokemon: [Object]
-}));
+    pokemon: [Object],
+  })
+);
