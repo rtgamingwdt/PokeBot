@@ -1,4 +1,5 @@
-const ClientBase = require("../ClientBase");
+const { createCanvas, loadImage } = require("canvas");
+const Database = require("../base/Database");
 const Event = require("../base/Event");
 
 module.exports = new class Ready extends Event {

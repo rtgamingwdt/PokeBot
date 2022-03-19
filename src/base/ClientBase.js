@@ -8,28 +8,48 @@ const {
   config
 } = require("dotenv");
 
+const {
+  connect
+} = require("mongoose");
+
+const {
+  readdirSync
+} = require("fs");
+
+const {
+  REST
+} = require("@discordjs/rest");
+
+const {
+  Routes
+} = require('discord-api-types/v9');
+const Database = require("./Database");
+
 module.exports = class ClientBase extends Client {
-  
+
   constructor(options = {}) {
     super({
       intents: [
-        Intents.FLAGS.GUILDS
+        Intents.FLAGS.GUILDS,
+        Intents.FLAGS.GUILD_MESSAGES
       ]
     });
-    
+
     config();
-    
+
     this.config = process.env;
-    
+
     this.commandArray = [];
     this.commands = new Collection();
   }
-  
+
   async build() {
     this.login(this.config.TOKEN);
     this.connectDB(this.config.MONGO_URI);
+    this.handleEvents();
+    this.handleCommands();
   }
-  
+
   async connectDB(uri) {
     if (uri) {
       await connect(uri).then(() => {
@@ -41,13 +61,13 @@ module.exports = class ClientBase extends Client {
       console.log("DATABASE URI NOT FOUND");
     }
   }
-  
+
   async handleEvents() {
     const files = readdirSync("src/event");
-    
+
     for (const file of files) {
-      const event = require(`./event/${file}`);
-      
+      const event = require(`../event/${file}`);
+
       if (event.isOnce()) {
         this.once(event.getName(), event.execute.bind(null, this));
       } else {
@@ -55,7 +75,7 @@ module.exports = class ClientBase extends Client {
       }
     }
   }
-  
+
   async handleCommands() {
     const folders = readdirSync("src/command");
 
@@ -63,9 +83,9 @@ module.exports = class ClientBase extends Client {
       const files = readdirSync(`src/command/${folder}`);
 
       for (const file of files) {
-        const command = require(`./command/${folder}/${file}`);
-        this.commandMap.set(command.get.name, command);
-        this.commands.push(command.get.toJSON());
+        const command = require(`../command/${folder}/${file}`);
+        this.commands.set(command.get.name, command);
+        this.commandArray.push(command.get.toJSON());
       }
     }
 
@@ -75,9 +95,19 @@ module.exports = class ClientBase extends Client {
       try {
         console.log('Started refreshing application (/) commands.');
         await rest.put(                     //CLIENT ID             //GUILD ID
-          Routes.applicationGuildCommands("941785047692898354", "948135520955932702"),
-          { body: this.commands },
+          Routes.applicationGuildCommands("941785047692898354", "953072048576536596"),
+          { body: this.commandArray },
         );
+
+        // await rest.get(Routes.applicationCommands("941785047692898354"))
+        //   .then(data => {
+        //     const promises = [];
+        //     for (const command of data) {
+        //       const deleteUrl = `${Routes.applicationCommands("941785047692898354")}/${command.id}`;
+        //       promises.push(rest.delete(deleteUrl));
+        //     }
+        //     return Promise.all(promises);
+        //   });
 
         console.log('Successfully reloaded application (/) commands.');
       } catch (error) {
@@ -85,8 +115,12 @@ module.exports = class ClientBase extends Client {
       }
     })();
   }
-  
+
   async getConfig() {
-        return this.config;
-    }
+    return this.config;
+  }
+
+  // async getDatabase() {
+  //   return this.database;
+  // }
 }
