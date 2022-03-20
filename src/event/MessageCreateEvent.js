@@ -4,6 +4,7 @@ const Database = require("../base/Database");
 const Event = require("../base/Event");
 const { create } = require("../model/GuildModel");
 
+
 module.exports = new (class MessageCreate extends Event {
   constructor() {
     super("messageCreate", false);
@@ -22,6 +23,13 @@ module.exports = new (class MessageCreate extends Event {
       const chanceOfSpawn = Math.floor(Math.random() * (5 - 1 + 1) + 1);
 
       // console.log(chanceOfSpawn);
+      const randomcatcharray = [
+        "A wild pokemon has appeared!",
+        "Ohh! Look there is a pokèmon in the grass!"
+      ]
+
+      let randomcatchtext = Math.floor(Math.random() *randomcatcharray.length);
+
 
       if (chanceOfSpawn == 5) {
         const { data } = await Database.getRandomPokemon();
@@ -32,7 +40,7 @@ module.exports = new (class MessageCreate extends Event {
           .send({
             embeds: [
               new MessageEmbed()
-                .setTitle("A wild pokemon has appeared!")
+                .setTitle(`${randomcatcharray[randomcatchtext]}`)
                 .setDescription(
                   `A wild ${data.name} has appeared! Type \`catch\` to catch the pokemon!`
                 )
@@ -49,6 +57,8 @@ module.exports = new (class MessageCreate extends Event {
               time: 30000,
             });
 
+            let said = false;
+
             collector.on("collect", async (m) => {
               if (
                 m.content.toLowerCase() == "catch" &&
@@ -58,7 +68,7 @@ module.exports = new (class MessageCreate extends Event {
                   return channel.send({
                     embeds: [
                       new MessageEmbed()
-                        .setTitle("Start Your Pokemon Journey Today!")
+                        .setTitle("Hey! You! Start Your Pokemon Journey Today!")
                         .setDescription(
                           "You cannot catch any pokemon until you have recieved your starter pokemon! You can get started by using the `start` command!"
                         )
@@ -70,6 +80,7 @@ module.exports = new (class MessageCreate extends Event {
                 console.log(catchChance);
 
                 if (catchChance == 2) {
+                  said = true;
                   await Database.givePokemon(
                     message.author.id,
                     `${data.name}`
@@ -92,13 +103,25 @@ module.exports = new (class MessageCreate extends Event {
                       new MessageEmbed()
                         .setTitle("Catch Failed.")
                         .setDescription(
-                          `${m.author.tag}, failed to catch ${data.name}!`
+                          `${m.author.tag}, failed to catch ${data.name} because it ran away!`
                         )
                         .setColor("RED"),
                     ],
                   });
                   collector.stop();
                 }
+              }
+            });
+
+            collector.on("end", () => {
+              if (!said) {
+                msg.edit({
+                  embeds: [
+                    new MessageEmbed()
+                    .setDescription(`${data.name}, has ran away.`)
+                    .setColor("RED")
+                  ]
+                })
               }
             });
           });

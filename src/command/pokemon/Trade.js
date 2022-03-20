@@ -11,7 +11,7 @@ module.exports = new (class Ping extends Command {
     super(
       new SlashCommandBuilder()
         .setName("trade")
-        .setDescription("Get started with PokeBot!")
+        .setDescription("Trade pokemon with another trainer!")
         .addUserOption((option) =>
           option
             .setName("trainer")
@@ -40,13 +40,29 @@ module.exports = new (class Ping extends Command {
       return interaction.reply({
         embeds: [
           new MessageEmbed()
-            .setTitle("Start Your Pokemon Journey Today!")
+            .setTitle("Hey! You! Start Your Pokemon Journey Today!")
             .setDescription(
               "You cannot trade any pokemon until you have recieved your starter pokemon! You can get started by using the `start` command!"
             )
             .setColor("RED"),
         ],
       });
+    }
+
+    trainer1.pokemon.some((element) => {
+      if (element.name == interaction.options.getString("pokemon")) {
+        pokemon1.push(element.name);
+      }
+    });
+
+    if(pokemon1.length == 0) {
+      return interaction.reply({
+        embeds: [
+          new MessageEmbed()
+          .setDescription(`You don't have the pokemon called ${interaction.options.getString("pokemon")}`)
+          .setColor("RED")
+        ]
+      })
     }
 
     const trainer2 = await Database.getUserData(
@@ -66,17 +82,11 @@ module.exports = new (class Ping extends Command {
       });
     }
 
-    trainer1.pokemon.some((element) => {
-      if (element.name == interaction.options.getString("pokemon")) {
-        console.log(true);
-      }
-    });
-
-    await Database.tradePokemon(
-      trainer1.UserID,
-      trainer2.UserID,
-      "camerupt-mega",
-      "swampert-mega"
-    );
+    // await Database.tradePokemon(
+    //   trainer1.UserID,
+    //   trainer2.UserID,
+    //   "camerupt-mega",
+    //   "swampert-mega"
+    // );
   }
 });

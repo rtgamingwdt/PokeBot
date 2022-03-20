@@ -87,6 +87,117 @@ module.exports = class Database {
     );
   }
 
+  static async giveBadge(id, badge) {
+    const data = await this.getUserData(id);
+
+    const badges = data.badges;
+
+    console.log(data.badges);
+
+    if (badge == "Founder") {
+      console.log("FOUNDER");
+      await UserModel.findOneAndUpdate({
+        UserID: id
+      }, {
+        badges: [
+          {
+            name: "Founder",
+            has: true
+          }, {
+            name: "Moderator",
+            has: badges[1].has
+          }, {
+            name: "Indigo",
+            has: badges[2].has
+          },
+          {
+            name: "Johnto",
+            has: badges[3].has
+          },
+          {
+            name: "Hoenn",
+            has: badges[4].has
+          },
+          {
+            name: "Sinnoh",
+            has: badges[5].has
+          },
+          {
+            name: "Unova",
+            has: badges[6].has
+          },
+          {
+            name: "Kalos",
+            has: badges[7].has
+          },
+          {
+            name: "Galar",
+            has: badges[8].has
+          }
+        ]
+      })
+    }
+
+    if (badge == "Moderator") {
+      console.log("Moderator");
+      await UserModel.findOneAndUpdate({
+        UserID: id
+      }, {
+        badges: [
+          {
+            name: "Founder",
+            has: badges[0].has
+          }, {
+            name: "Moderator",
+            has: true
+          }, {
+            name: "Indigo",
+            has: badges[2].has
+          },
+          {
+            name: "Johnto",
+            has: badges[3].has
+          },
+          {
+            name: "Hoenn",
+            has: badges[4].has
+          },
+          {
+            name: "Sinnoh",
+            has: badges[5].has
+          },
+          {
+            name: "Unova",
+            has: badges[6].has
+          },
+          {
+            name: "Kalos",
+            has: badges[7].has
+          },
+          {
+            name: "Galar",
+            has: badges[8].has
+          }
+        ]
+      })
+    }
+  }
+
+  static async getBadges(id) {
+    const badges = [];
+    const data = await this.getUserData(id);
+
+    data.badges.forEach((badge) => {
+      if(badge.has) {
+        console.log(badge)
+        badges.push(badge.name);
+      }
+    });
+
+    console.log(badges);
+    return badges;
+  }
+
   static async takePokemon(id, name) {
     const { data } = await this.getPokemon(name);
     await UserModel.findOneAndUpdate(
@@ -188,7 +299,49 @@ module.exports = class Database {
           },
         },
       ],
+      badges: [
+        {
+          name: "Founder",
+          has: false
+        }, {
+          name: "Moderator",
+          has: false
+        }, {
+          name: "Indigo",
+          has: false
+        },
+        {
+          name: "Johnto",
+          has: false
+        },
+        {
+          name: "Hoenn",
+          has: false
+        },
+        {
+          name: "Sinnoh",
+          has: false
+        },
+        {
+          name: "Unova",
+          has: false
+        },
+        {
+          name: "Kalos",
+          has: false
+        },
+        {
+          name: "Galar",
+          has: false
+        }
+      ]
     });
+  }
+
+  static async deleteUserData(id) {
+    await UserModel.deleteOne({
+      UserID: id
+    })
   }
 
   static async tradePokemon(trainer1, trainer2, pokemon1, pokemon2) {

@@ -4,7 +4,7 @@ const { config } = require("dotenv");
 
 const { connect } = require("mongoose");
 
-const chalk = require("chalk")
+const chalk = require("chalk"); // you cant´require chalk like that you need to use imports cause of ESM
 
 const { readdirSync } = require("fs");
 
@@ -14,11 +14,12 @@ const { Routes } = require("discord-api-types/v9");
 const Database = require("./Database");
 
 module.exports = class ClientBase extends Client {
+
   constructor(options = {}) {
     super({
       intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
     });
-
+    
     config();
 
     this.config = process.env;
@@ -99,7 +100,7 @@ module.exports = class ClientBase extends Client {
         //     return Promise.all(promises);
         //   });
 
-        console.log("Successfully reloaded application (/) commands.");
+        console.log(chalk.cyan("Successfully reloaded application (/) commands."));
       } catch (error) {
         console.error(error);
       }
