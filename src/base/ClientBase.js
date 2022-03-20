@@ -28,12 +28,20 @@ module.exports = class ClientBase extends Client {
     this.commands = new Collection();
   }
 
+/**
+ * It connects to the database, handles events and commands.
+ */
   async build() {
     this.login(this.config.TOKEN);
     this.connectDB(this.config.MONGO_URI);
     this.handleEvents();
     this.handleCommands();
   }
+
+/**
+ * Connect to a database using the provided URI
+ * @param uri - The database URI.
+ */
 
   async connectDB(uri) {
     if (uri) {
@@ -49,6 +57,9 @@ module.exports = class ClientBase extends Client {
     }
   }
 
+/**
+ * It reads the event directory and loads all the events into the bot.
+ */
   async handleEvents() {
     const files = readdirSync("src/event");
 
@@ -63,6 +74,7 @@ module.exports = class ClientBase extends Client {
     }
   }
 
+/* It reads the command directory and loads all the commands into the bot. */
   async handleCommands() {
     const folders = readdirSync("src/command");
 
@@ -107,6 +119,10 @@ module.exports = class ClientBase extends Client {
     })();
   }
 
+/**
+ * Get the configuration for the current notebook
+ * @returns The configuration object.
+ */
   async getConfig() {
     return this.config;
   }
