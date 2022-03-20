@@ -30,7 +30,7 @@ module.exports = new (class Admin extends Command {
                                 .setName("badge")
                                 .setDescription("The bade you want to give")
                                 .addChoices([
-                                    ["Founder", "Founder"],
+                                    ["👑Founder", "Founder"],
                                     ["Moderator", "Moderator"],
                                     ["Indigo", "Indigo"],
                                     ["Johnto", "Johnto"],
