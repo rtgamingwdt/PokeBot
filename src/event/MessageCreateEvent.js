@@ -20,7 +20,7 @@ module.exports = new (class MessageCreate extends Event {
     const guildData = await Database.getGuildData(message.guild.id);
 
     if (guildData.spawns) {
-      const chanceOfSpawn = Math.floor(Math.random() * (5 - 1 + 1) + 1);
+      const chanceOfSpawn = Math.floor(Math.random() * (3 - 1 + 1) + 1);
 
       // console.log(chanceOfSpawn);
       const randomcatcharray = [
@@ -31,7 +31,7 @@ module.exports = new (class MessageCreate extends Event {
       let randomcatchtext = Math.floor(Math.random() *randomcatcharray.length);
 
 
-      if (chanceOfSpawn == 5) {
+      if (chanceOfSpawn == 3) {
         const { data } = await Database.getRandomPokemon();
         const channel = client.channels.cache.get(
           await Database.getPokespawnChannel(message.guild.id)

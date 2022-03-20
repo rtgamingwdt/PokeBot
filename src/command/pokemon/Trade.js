@@ -1,9 +1,9 @@
 const Command = require("../../base/Command");
 
 const {
-    SlashCommandBuilder
+  SlashCommandBuilder
 } = require("@discordjs/builders");
-const { MessageEmbed, MessageButton, MessageActionRow, MessageComponentInteraction } = require("discord.js");
+const { MessageEmbed, MessageButton, MessageActionRow, MessageComponentInteraction, MessageSelectMenu } = require("discord.js");
 const Database = require("../../base/Database");
 
 module.exports = new (class Ping extends Command {
@@ -55,12 +55,12 @@ module.exports = new (class Ping extends Command {
       }
     });
 
-    if(pokemon1.length == 0) {
+    if (pokemon1.length == 0) {
       return interaction.reply({
         embeds: [
           new MessageEmbed()
-          .setDescription(`You don't have the pokemon called ${interaction.options.getString("pokemon")}`)
-          .setColor("RED")
+            .setDescription(`You don't have the pokemon called ${interaction.options.getString("pokemon")}`)
+            .setColor("RED")
         ]
       })
     }
@@ -82,11 +82,147 @@ module.exports = new (class Ping extends Command {
       });
     }
 
-    // await Database.tradePokemon(
-    //   trainer1.UserID,
-    //   trainer2.UserID,
-    //   "camerupt-mega",
-    //   "swampert-mega"
-    // );
+    interaction.reply({
+      embeds: [
+        new MessageEmbed()
+          .setDescription(`${interaction.options.getUser("trainer").tag}, ${interaction.user.tag} wants to trade a ${interaction.options.getString("pokemon")} for one of your pokemon!`)
+          .setColor("GREEN")
+      ],
+      components: [
+        new MessageActionRow().addComponents([
+          new MessageButton()
+            .setCustomId("AcceptTrade")
+            .setLabel("Accept")
+            .setStyle("SUCCESS"),
+          new MessageButton()
+            .setCustomId("DeclineTrade")
+            .setLabel("Decline")
+            .setStyle("DANGER")
+        ])
+      ]
+    }).then((msg) => {
+      const filter = (i) =>
+        (i.customId === "AcceptTrade" && i.user.id === interaction.options.getUser("trainer").id) ||
+        (i.customId === "DeclineTrade" && i.user.id === interaction.options.getUser("trainer").id);
+
+      const collector = interaction.channel.createMessageComponentCollector(
+        { filter, time: 30000 }
+      );
+
+      const pokemonList = [];
+      const pokemonToTrade = [];
+
+      collector.on("collect", async (i) => {
+        if (i.customId === "AcceptTrade" && i.user.id === interaction.options.getUser("trainer").id) {
+          const data = await Database.getUserData(interaction.options.getUser("trainer").id);
+
+          data.pokemon.forEach((pokemon) => {
+            pokemonList.push({
+              label: pokemon.name,
+              description: pokemon.name,
+              value: pokemon.name
+            })
+          });
+
+          await interaction.editReply({
+            embeds: [
+              new MessageEmbed()
+                .setDescription(`${interaction.options.getUser("trainer").tag}, choose one of your pokemon from the dropdown!`)
+                .setColor("GREEN")
+            ],
+            components: [
+              new MessageActionRow().addComponents([
+                new MessageSelectMenu()
+                  .setCustomId('TradeSelection')
+                  .setPlaceholder('No Pokemon Selected!')
+                  .addOptions(pokemonList),
+              ])
+            ]
+          });
+        } else if (i.customId === "DeclineTrade" && i.user.id === interaction.options.getUser("trainer").id) {
+          await interaction.editReply({
+            embeds: [
+              new MessageEmbed()
+                .setDescription("Declined Trade!")
+                .setColor("RED")
+            ],
+            components: []
+          });
+          collector.stop();
+        }
+      });
+
+      const filter2 = (i) =>
+        (i.customId === "TradeSelection" && i.user.id === interaction.options.getUser("trainer").id);
+      const collector2 = interaction.channel.createMessageComponentCollector(
+        { filter2, time: 30000 }
+      );
+
+      collector2.on("collect", async (i) => {
+        if (i.isSelectMenu()) {
+          pokemonToTrade.push(`${interaction.options.getString("pokemon").toLowerCase()}`, `${i.values[0]}`);
+          console.log(pokemonToTrade);
+          await interaction.editReply(
+            {
+              embeds: [
+                new MessageEmbed()
+                  .setDescription(`${interaction.options.getUser("trainer")} is willing to trade a ${pokemonToTrade[1]} for your ${pokemonToTrade[0]}, do you accept the trade ${interaction.user.tag}?`)
+                  .setColor("GREEN")
+              ],
+              components: [
+                new MessageActionRow().addComponents([
+                  new MessageButton()
+                    .setCustomId("AcceptFinalTrade")
+                    .setLabel("Accept")
+                    .setStyle("SUCCESS"),
+                  new MessageButton()
+                    .setCustomId("DeclineFinalTrade")
+                    .setLabel("Decline")
+                    .setStyle("DANGER")
+                ])
+              ]
+            })
+        }
+      });
+
+      const filter3 = (i) =>
+        (i.customId === "AcceptFinalTrade" && i.user.id === interaction.user.id) ||
+        (i.customId === "DeclineFinalTrade" && i.user.id === interaction.user.id);
+      const collector3 = interaction.channel.createMessageComponentCollector(
+        { filter3, time: 15000 }
+      );
+
+      collector3.on("collect", async (i) => {
+        if (i.customId === "AcceptFinalTrade" && i.user.id === interaction.user.id) {
+          await Database.tradePokemon(interaction.user.id, interaction.options.getUser("trainer").id, pokemonToTrade[0], pokemonToTrade[1]).then(async () => {
+            await interaction.editReply({
+              embeds: [
+                new MessageEmbed()
+                  .setTitle("Trade Successful!")
+                  .setDescription("Trade was successfully made!")
+                  .setColor("GREEN")
+              ],
+              components: []
+            });
+          })
+          collector.stop();
+          collector2.stop();
+          collector3.stop();
+        } else if (i.customId === "DeclineFinalTrade" && i.user.id === interaction.user.id) {
+          await interaction.editReply({
+            embeds: [
+              new MessageEmbed()
+                .setTitle("Trade Failed")
+                .setDescription("The trade was cancelled")
+                .setColor("RED")
+            ],
+            components: []
+          });
+          collector.stop();
+          collector2.stop();
+          collector3.stop();
+        }
+      })
+    });
   }
 });

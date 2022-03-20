@@ -92,8 +92,6 @@ module.exports = class Database {
 
     const badges = data.badges;
 
-    console.log(data.badges);
-
     if (badge == "Founder") {
       console.log("FOUNDER");
       await UserModel.findOneAndUpdate({

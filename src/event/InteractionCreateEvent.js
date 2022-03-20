@@ -6,7 +6,6 @@ module.exports = new (class InteractionCreate extends Event {
   }
 
   async execute(client, interaction) {
-    if (!interaction.isCommand) return;
 
     const command = client.commands.get(interaction.commandName);
 
