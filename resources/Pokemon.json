@@ -402,5 +402,209 @@
     {
         "name": "Voltorb",
         "id": "100"
+    },
+    {
+        "name": "Electrode",
+        "id": "101"
+    },
+    {
+        "name": "Exeggcute",
+        "id": "102"
+    },
+    {
+        "name": "Exeggutor",
+        "id": "103"
+    },
+    {
+        "name": "Cubone",
+        "id": "104"
+    },
+    {
+        "name": "Marowak",
+        "id": "105"
+    },
+    {
+        "name": "Hitmonlee",
+        "id": "106"
+    },
+    {
+        "name": "Hitmonchan",
+        "id": "107"
+    },
+    {
+        "name": "Lickitung",
+        "id": "108"
+    },
+    {
+        "name": "Koffing",
+        "id": "109"
+    },
+    {
+        "name": "Weezing",
+        "id": "110"
+    },
+    {
+        "name": "Rhyhorn",
+        "id": "111"
+    },
+    {
+        "name": "Rhydon",
+        "id": "112"
+    },
+    {
+        "name": "Chansey",
+        "id": "113"
+    },
+    {
+        "name": "Tangela",
+        "id": "114"
+    },
+    {
+        "name": "Kangaskhan",
+        "id": "115"
+    },
+    {
+        "name": "Horsea",
+        "id": "116"
+    },
+    {
+        "name": "Seadra",
+        "id": "117"
+    },
+    {
+        "name": "Goldeen",
+        "id": "118"
+    },
+    {
+        "name": "Seaking",
+        "id": "119"
+    },
+    {
+        "name": "Staryu",
+        "id": "120"
+    },
+    {
+        "name": "Starmie",
+        "id": "121"
+    },
+    {
+        "name": "Mr. Mime",
+        "id": "122"
+    },
+    {
+        "name": "Scyther",
+        "id": "123"
+    },
+    {
+        "name": "Jynx",
+        "id": "124"
+    },
+    {
+        "name": "Electabuzz",
+        "id": "125"
+    },
+    {
+        "name": "Magmar",
+        "id": "126"
+    },
+    {
+        "name": "Pinsir",
+        "id": "127"
+    },
+    {
+        "name": "Tauros",
+        "id": "128"
+    },
+    {
+        "name": "Magikarp",
+        "id": "129"
+    },
+    {
+        "name": "Gyarados",
+        "id": "130"
+    },
+    {
+        "name": "Lapras",
+        "id": "131"
+    },
+    {
+        "name": "Ditto",
+        "id": "132"
+    },
+    {
+        "name": "Eevee",
+        "id": "133"
+    },
+    {
+        "name": "Vaporeon",
+        "id": "134"
+    },
+    {
+        "name": "Jolteon",
+        "id": "135"
+    },
+    {
+        "name": "Flareon",
+        "id": "136"
+    },
+    {
+        "name": "Porygon",
+        "id": "137"
+    },
+    {
+        "name": "Omanyte",
+        "id": "138"
+    },
+    {
+        "name": "Omastar",
+        "id": "139"
+    },
+    {
+        "name": "Kabuto",
+        "id": "140"
+    },
+    {
+        "name": "Kabutops",
+        "id": "141"
+    },
+    {
+        "name": "Aerodactyl",
+        "id": "142"
+    },
+    {
+        "name": "Snorlax",
+        "id": "143"
+    },
+    {
+        "name": "Articuno",
+        "id": "144"
+    },
+    {
+        "name": "Zapdos",
+        "id": "145"
+    },
+    {
+        "name": "Moltres",
+        "id": "146"
+    },
+    {
+        "name": "Dratini",
+        "id": "147"
+    },
+    {
+        "name": "Dragonair",
+        "id": "148"
+    },
+    {
+        "name": "Dragonite",
+        "id": "149"
+    },
+    {
+        "name": "Mewtwo",
+        "id": "150"
+    },
+    {
+        "name": "Mew",
+        "id": "151"
     }
 ]
