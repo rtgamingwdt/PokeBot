@@ -1,0 +1,307 @@
+[
+    {
+        "name": null,
+        "id": null
+    },
+    {
+        "name": "Master Ball",
+        "id": "001"
+    }, {
+        "name": "Ultra Ball",
+        "id": "002"
+    }, {
+        "name": "Great Ball",
+        "id": "003"
+    }, {
+        "name": "Poke Ball",
+        "id": "004"
+    }, {
+        "name": "Town Map",
+        "id": "005"
+    }, {
+        "name": "Bicycle",
+        "id": "006"
+    }, {
+        "name": "Dive Ball",
+        "id": "007"
+    }, {
+        "name": "Safari Ball",
+        "id": "008"
+    }, {
+        "name": "Pokedex",
+        "id": "009"
+    }, {
+        "name": "Moon Stone",
+        "id": "010"
+    }, {
+        "name": "Antidote",
+        "id": "011"
+    }, {
+        "name": "Burn Heal",
+        "id": "012"
+    }, {
+        "name": "Ice Heal",
+        "id": "013"
+    }, {
+        "name": "Awakening",
+        "id": "014"
+    }, {
+        "name": "Paralyze Heal",
+        "id": "015"
+    }, {
+        "name": "Full Restore",
+        "id": "016"
+    }, {
+        "name": "Max Potion",
+        "id": "017"
+    }, {
+        "name": "Hyper Potion",
+        "id": "018"
+    }, {
+        "name": "Super Potion",
+        "id": "019"
+    }, {
+        "name": "Potion",
+        "id": "020"
+    }, {
+        "name": "Boulder Badge",
+        "id": "021"
+    }, {
+        "name": "Cascade Badge",
+        "id": "022"
+    }, {
+        "name": "Thunder Badge",
+        "id": "023"
+    }, {
+        "name": "Rainbow Badge",
+        "id": "024"
+    }, {
+        "name": "Soul Badge",
+        "id": "025"
+    }, {
+        "name": "Marsh Badge",
+        "id": "026"
+    }, {
+        "name": "Volcano Badge",
+        "id": "027"
+    }, {
+        "name": "Earth Badge",
+        "id": "028"
+    }, {
+        "name": "Escape Rope",
+        "id": "029"
+    }, {
+        "name": "Repel",
+        "id": "030"
+    }, {
+        "name": "Old Amber",
+        "id": "031"
+    }, {
+        "name": "Fire Stone",
+        "id": "032"
+    }, {
+        "name": "Thunder Stone",
+        "id": "033"
+    }, {
+        "name": "Water Stone",
+        "id": "034"
+    }, {
+        "name": "HP Up",
+        "id": "035"
+    }, {
+        "name": "Protein",
+        "id": "036"
+    }, {
+        "name": "Iron",
+        "id": "037"
+    }, {
+        "name": "Carbos",
+        "id": "038"
+    }, {
+        "name": "Calcium",
+        "id": "039"
+    }, {
+        "name": "Rare Candy",
+        "id": "040"
+    }, {
+        "name": "Dome Fossil",
+        "id": "041"
+    }, {
+        "name": "Helix Fossil",
+        "id": "042"
+    }, {
+        "name": "Secret Key",
+        "id": "043"
+    }, {
+        "name": "Sacred Ash",
+        "id": "044"
+    }, {
+        "name": "Bike Voucher",
+        "id": "045"
+    }, {
+        "name": "X Accuracy",
+        "id": "046"
+    }, {
+        "name": "Leaf Stone",
+        "id": "047"
+    }, {
+        "name": "Card Key",
+        "id": "048"
+    }, {
+        "name": "Nugget",
+        "id": "049"
+    }, {
+        "name": "PP Up",
+        "id": "050"
+    }, {
+        "name": "Poke Doll",
+        "id": "051"
+    }, {
+        "name": "Full Heal",
+        "id": "052"
+    }, {
+        "name": "Revive",
+        "id": "053"
+    }, {
+        "name": "Max Revive",
+        "id": "054"
+    }, {
+        "name": "Guard Spec",
+        "id": "055"
+    }, {
+        "name": "Super Repel",
+        "id": "056"
+    }, {
+        "name": "Max Repel",
+        "id": "057"
+    }, {
+        "name": "Dire Hit",
+        "id": "058"
+    }, {
+        "name": "Coin",
+        "id": "059"
+    }, {
+        "name": "Fresh Water",
+        "id": "060"
+    }, {
+        "name": "Soda Pop",
+        "id": "061"
+    }, {
+        "name": "Lemonade",
+        "id": "062"
+    }, {
+        "name": "S.S. Ticket",
+        "id": "063"
+    }, {
+        "name": "Gold Teeth",
+        "id": "064"
+    }, {
+        "name": "X Attack",
+        "id": "065"
+    }, {
+        "name": "X Defend",
+        "id": "066"
+    }, {
+        "name": "X Speed",
+        "id": "067"
+    }, {
+        "name": "X Special",
+        "id": "068"
+    }, {
+        "name": "Coin Case",
+        "id": "069"
+    }, {
+        "name": "Oak's Parcel",
+        "id": "070"
+    }, {
+        "name": "Item Finder",
+        "id": "071"
+    }, {
+        "name": "Silph Scope",
+        "id": "072"
+    }, {
+        "name": "Poke Flute",
+        "id": "073"
+    }, {
+        "name": "Lift Key",
+        "id": "074"
+    }, {
+        "name": "Exp. All",
+        "id": "075"
+    }, {
+        "name": "Old Rod",
+        "id": "076"
+    }, {
+        "name": "Good Rod",
+        "id": "077"
+    }, {
+        "name": "Super Rod",
+        "id": "078"
+    }, {
+        "name": "PP Up",
+        "id": "079"
+    }, {
+        "name": "Ether",
+        "id": "080"
+    }, {
+        "name": "Max Ether",
+        "id": "081"
+    }, {
+        "name": "Elixer",
+        "id": "082"
+    }, {
+        "name": "Max Elixer",
+        "id": "083"
+    }, {
+        "name": "B2F",
+        "id": "084"
+    }, {
+        "name": "B1F",
+        "id": "085"
+    }, {
+        "name": "1F",
+        "id": "086"
+    }, {
+        "name": "2F",
+        "id": "087"
+    }, {
+        "name": "3F",
+        "id": "088"
+    }, {
+        "name": "4F",
+        "id": "089"
+    }, {
+        "name": "5F",
+        "id": "090"
+    }, {
+        "name": "6F",
+        "id": "091"
+    }, {
+        "name": "7F",
+        "id": "092"
+    }, {
+        "name": "8F",
+        "id": "093"
+    }, {
+        "name": "9F",
+        "id": "094"
+    }, {
+        "name": "10F",
+        "id": "095"
+    }, {
+        "name": "11F",
+        "id": "096"
+    }, {
+        "name": "B4F",
+        "id": "097"
+    }, {
+        "name": "Thunder Badge",
+        "id": "098"
+    }, {
+        "name": "Shell Badge",
+        "id": "099"
+    }, {
+        "name": "Jizo Badge",
+        "id": "100"
+    }
+]
