@@ -2,8 +2,7 @@ const { createCanvas, loadImage } = require("canvas");
 const { MessageAttachment, MessageEmbed } = require("discord.js");
 const Database = require("../base/Database");
 const Event = require("../base/Event");
-const { create } = require("../model/GuildModel");
-
+const { readdirSync } = require("fs");
 
 module.exports = new (class MessageCreate extends Event {
   constructor() {
@@ -20,7 +19,7 @@ module.exports = new (class MessageCreate extends Event {
     const guildData = await Database.getGuildData(message.guild.id);
 
     if (guildData.spawns) {
-      const chanceOfSpawn = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+      const chanceOfSpawn = Math.floor(Math.random() * (5 - 1 + 1) + 1);
 
       // console.log(chanceOfSpawn);
       const randomcatcharray = [
@@ -28,30 +27,45 @@ module.exports = new (class MessageCreate extends Event {
         "Ohh! Look there is a pokèmon in the grass!"
       ]
 
-      let randomcatchtext = Math.floor(Math.random() *randomcatcharray.length);
+      let randomcatchtext = Math.floor(Math.random() * randomcatcharray.length);
 
 
-      if (chanceOfSpawn == 3) {
+      console.log(chanceOfSpawn);
+
+      if (chanceOfSpawn == 5) {
         const { data } = await Database.getRandomPokemon();
         const channel = client.channels.cache.get(
           await Database.getPokespawnChannel(message.guild.id)
         );
+        
+        const canvas = createCanvas(700, 700);
+        const ctx = canvas.getContext('2d');
+        const scenery = await loadImage("https://wallpaperaccess.com/full/3551101.png");
+        const dialog = await loadImage("https://cdn.discordapp.com/attachments/954166907089612861/955202334152065024/Dialog_Box.png");
+        const pokemon = await loadImage(`${data.sprites.front_default}`);
+
+        ctx.drawImage(scenery, 0, 0, canvas.width, canvas.height);
+        ctx.drawImage(dialog, 0, 525, canvas.width, 175);
+        ctx.drawImage(pokemon, 223, 223, 255, 225);
+
+        ctx.font = `bold 20px Sans`;
+        ctx.fillStyle = `white`;
+        // ctx.textAlign = "start";
+        ctx.shadowBlur = 100;
+
+        ctx.fillText(`\nA wild ${data.name}, has appeared!\nHurry up and type catch before they run away!`, 30, 560);
+
+        const attachment = new MessageAttachment(canvas.toBuffer(), `${data.name}.png`);
+
         channel
           .send({
-            embeds: [
-              new MessageEmbed()
-                .setTitle(`${randomcatcharray[randomcatchtext]}`)
-                .setDescription(
-                  `A wild ${data.name} has appeared! Type \`catch\` to catch the pokemon!`
-                )
-                .setColor("YELLOW")
-                .setThumbnail(data.sprites.front_default)
-                .setTimestamp(),
-            ],
+            files: [
+              attachment
+            ]
           })
           .then((msg) => {
             const filter = (m) =>
-              m.content.toLowerCase() == "catch" && m.channel.id == channel.id;
+              m.content.toLowerCase().startsWith("catch") && m.channel.id == channel.id;
             const collector = channel.createMessageCollector({
               filter,
               time: 30000,
@@ -61,7 +75,7 @@ module.exports = new (class MessageCreate extends Event {
 
             collector.on("collect", async (m) => {
               if (
-                m.content.toLowerCase() == "catch" &&
+                m.content.toLowerCase().startsWith("catch") &&
                 m.channel.id == channel.id
               ) {
                 if (!(await Database.getUserData(m.author.id)))
@@ -118,8 +132,8 @@ module.exports = new (class MessageCreate extends Event {
                 msg.edit({
                   embeds: [
                     new MessageEmbed()
-                    .setDescription(`${data.name}, has ran away.`)
-                    .setColor("RED")
+                      .setDescription(`${data.name}, has ran away.`)
+                      .setColor("RED")
                   ]
                 })
               }

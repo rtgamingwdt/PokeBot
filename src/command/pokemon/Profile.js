@@ -33,7 +33,7 @@ module.exports = new (class Ping extends Command {
 
     if (!data) {
       embed.setTitle(`${user.tag}, is not a trainer yet`);
-      embed.setDescription(`Use **/start** to start your jurney as a pokèmon trainer!`);
+      embed.setDescription(`Use **/start** to start your journey as a pokèmon trainer!`);
       embed.setColor("YELLOW");
     } else {
       let badgeList = await Database.getBadges(user.id);

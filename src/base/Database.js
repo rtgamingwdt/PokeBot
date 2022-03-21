@@ -1,4 +1,5 @@
 const { get } = require("axios");
+const { load } = require("cheerio");
 const GuildModel = require("../model/GuildModel");
 const UserModel = require("../model/UserModel");
 
@@ -93,7 +94,6 @@ module.exports = class Database {
     const badges = data.badges;
 
     if (badge == "Founder") {
-      console.log("FOUNDER");
       await UserModel.findOneAndUpdate({
         UserID: id
       }, {
@@ -137,7 +137,6 @@ module.exports = class Database {
     }
 
     if (badge == "Moderator") {
-      console.log("Moderator");
       await UserModel.findOneAndUpdate({
         UserID: id
       }, {
@@ -179,6 +178,307 @@ module.exports = class Database {
         ]
       })
     }
+
+    if (badge == "Indigo") {
+      await UserModel.findOneAndUpdate({
+        UserID: id
+      }, {
+        badges: [
+          {
+            name: "Founder",
+            has: badges[0].has
+          }, {
+            name: "Moderator",
+            has: badges[1].has
+          }, {
+            name: "Indigo",
+            has: true
+          },
+          {
+            name: "Johnto",
+            has: badges[3].has
+          },
+          {
+            name: "Hoenn",
+            has: badges[4].has
+          },
+          {
+            name: "Sinnoh",
+            has: badges[5].has
+          },
+          {
+            name: "Unova",
+            has: badges[6].has
+          },
+          {
+            name: "Kalos",
+            has: badges[7].has
+          },
+          {
+            name: "Galar",
+            has: badges[8].has
+          }
+        ]
+      })
+    }
+
+    if (badge == "Johnto") {
+      await UserModel.findOneAndUpdate({
+        UserID: id
+      }, {
+        badges: [
+          {
+            name: "Founder",
+            has: badges[0].has
+          }, {
+            name: "Moderator",
+            has: badges[1].has
+          }, {
+            name: "Indigo",
+            has: badges[2].has
+          },
+          {
+            name: "Johnto",
+            has: true
+          },
+          {
+            name: "Hoenn",
+            has: badges[4].has
+          },
+          {
+            name: "Sinnoh",
+            has: badges[5].has
+          },
+          {
+            name: "Unova",
+            has: badges[6].has
+          },
+          {
+            name: "Kalos",
+            has: badges[7].has
+          },
+          {
+            name: "Galar",
+            has: badges[8].has
+          }
+        ]
+      })
+    }
+
+    if (badge == "Hoenn") {
+      await UserModel.findOneAndUpdate({
+        UserID: id
+      }, {
+        badges: [
+          {
+            name: "Founder",
+            has: badges[0].has
+          }, {
+            name: "Moderator",
+            has: badges[1].has
+          }, {
+            name: "Indigo",
+            has: badges[2].has
+          },
+          {
+            name: "Johnto",
+            has: badges[3].has
+          },
+          {
+            name: "Hoenn",
+            has: true
+          },
+          {
+            name: "Sinnoh",
+            has: badges[5].has
+          },
+          {
+            name: "Unova",
+            has: badges[6].has
+          },
+          {
+            name: "Kalos",
+            has: badges[7].has
+          },
+          {
+            name: "Galar",
+            has: badges[8].has
+          }
+        ]
+      })
+    }
+
+    if (badge == "Sinnoh") {
+      await UserModel.findOneAndUpdate({
+        UserID: id
+      }, {
+        badges: [
+          {
+            name: "Founder",
+            has: badges[0].has
+          }, {
+            name: "Moderator",
+            has: badges[1].has
+          }, {
+            name: "Indigo",
+            has: badges[2].has
+          },
+          {
+            name: "Johnto",
+            has: badges[3].has
+          },
+          {
+            name: "Hoenn",
+            has: badges[4].has
+          },
+          {
+            name: "Sinnoh",
+            has: true
+          },
+          {
+            name: "Unova",
+            has: badges[6].has
+          },
+          {
+            name: "Kalos",
+            has: badges[7].has
+          },
+          {
+            name: "Galar",
+            has: badges[8].has
+          }
+        ]
+      })
+    }
+
+    if (badge == "Unova") {
+      await UserModel.findOneAndUpdate({
+        UserID: id
+      }, {
+        badges: [
+          {
+            name: "Founder",
+            has: badges[0].has
+          }, {
+            name: "Moderator",
+            has: badges[1].has
+          }, {
+            name: "Indigo",
+            has: badges[2].has
+          },
+          {
+            name: "Johnto",
+            has: badges[3].has
+          },
+          {
+            name: "Hoenn",
+            has: badges[4].has
+          },
+          {
+            name: "Sinnoh",
+            has: badges[5].has
+          },
+          {
+            name: "Unova",
+            has: true
+          },
+          {
+            name: "Kalos",
+            has: badges[7].has
+          },
+          {
+            name: "Galar",
+            has: badges[8].has
+          }
+        ]
+      })
+    }
+
+    if (badge == "Kalos") {
+      await UserModel.findOneAndUpdate({
+        UserID: id
+      }, {
+        badges: [
+          {
+            name: "Founder",
+            has: badges[0].has
+          }, {
+            name: "Moderator",
+            has: badges[1].has
+          }, {
+            name: "Indigo",
+            has: badges[2].has
+          },
+          {
+            name: "Johnto",
+            has: badges[3].has
+          },
+          {
+            name: "Hoenn",
+            has: badges[4].has
+          },
+          {
+            name: "Sinnoh",
+            has: badges[5].has
+          },
+          {
+            name: "Unova",
+            has: badges[6].has
+          },
+          {
+            name: "Kalos",
+            has: true
+          },
+          {
+            name: "Galar",
+            has: badges[8].has
+          }
+        ]
+      })
+    }
+
+    if (badge == "Galar") {
+      await UserModel.findOneAndUpdate({
+        UserID: id
+      }, {
+        badges: [
+          {
+            name: "Founder",
+            has: badges[0].has
+          }, {
+            name: "Moderator",
+            has: badges[1].has
+          }, {
+            name: "Indigo",
+            has: badges[2].has
+          },
+          {
+            name: "Johnto",
+            has: badges[3].has
+          },
+          {
+            name: "Hoenn",
+            has: badges[4].has
+          },
+          {
+            name: "Sinnoh",
+            has: badges[5].has
+          },
+          {
+            name: "Unova",
+            has: badges[6].has
+          },
+          {
+            name: "Kalos",
+            has: badges[7].has
+          },
+          {
+            name: "Galar",
+            has: true
+          }
+        ]
+      })
+    }
   }
 
   static async getBadges(id) {
@@ -186,7 +486,7 @@ module.exports = class Database {
     const data = await this.getUserData(id);
 
     data.badges.forEach((badge) => {
-      if(badge.has) {
+      if (badge.has) {
         console.log(badge)
         badges.push(badge.name);
       }

@@ -1,3 +1,6 @@
 const ClientBase = require("./base/ClientBase");
 
-new ClientBase().build();
+const client = new ClientBase()
+client.build();
+
+module.exports = client;

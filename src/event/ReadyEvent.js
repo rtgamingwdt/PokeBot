@@ -23,6 +23,8 @@ module.exports = new (class Ready extends Event {
 
     client.user.setActivity(statusList[0]);
 
+    // await Database.getSprite("pikachu");
+
     setInterval(() => {
       const index = Math.floor(Math.random() * ((statusList.length - 1) - 0 + 1) + 0);
       const status = statusList[index];

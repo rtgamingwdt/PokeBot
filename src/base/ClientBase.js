@@ -19,7 +19,7 @@ module.exports = class ClientBase extends Client {
     super({
       intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
     });
-    
+
     config();
 
     this.config = process.env;
@@ -28,9 +28,9 @@ module.exports = class ClientBase extends Client {
     this.commands = new Collection();
   }
 
-/**
- * It connects to the database, handles events and commands.
- */
+  /**
+   * It connects to the database, handles events and commands.
+   */
   async build() {
     this.login(this.config.TOKEN);
     this.connectDB(this.config.MONGO_URI);
@@ -38,12 +38,13 @@ module.exports = class ClientBase extends Client {
     this.handleCommands();
   }
 
-/**
- * Connect to a database using the provided URI
- * @param uri - The database URI.
- */
+  /**
+   * Connect to a database using the provided URI
+   * @param uri - The database URI.
+   */
 
   async connectDB(uri) {
+    
     if (uri) {
       await connect(uri)
         .then(() => {
@@ -57,24 +58,26 @@ module.exports = class ClientBase extends Client {
     }
   }
 
-/**
- * It reads the event directory and loads all the events into the bot.
- */
+  /**
+   * It reads the event directory and loads all the events into the bot.
+   */
   async handleEvents() {
     const files = readdirSync("src/event");
 
     for (const file of files) {
-      const event = require(`../event/${file}`);
+      if (file.endsWith(".js")) {
+        const event = require(`../event/${file}`);
 
-      if (event.isOnce()) {
-        this.once(event.getName(), event.execute.bind(null, this));
-      } else {
-        this.on(event.getName(), event.execute.bind(null, this));
+        if (event.isOnce()) {
+          this.once(event.getName(), event.execute.bind(null, this));
+        } else {
+          this.on(event.getName(), event.execute.bind(null, this));
+        }
       }
     }
   }
 
-/* It reads the command directory and loads all the commands into the bot. */
+  /* It reads the command directory and loads all the commands into the bot. */
   async handleCommands() {
     const folders = readdirSync("src/command");
 
@@ -119,10 +122,10 @@ module.exports = class ClientBase extends Client {
     })();
   }
 
-/**
- * Get the configuration for the current notebook
- * @returns The configuration object.
- */
+  /**
+   * Get the configuration for the current notebook
+   * @returns The configuration object.
+   */
   async getConfig() {
     return this.config;
   }

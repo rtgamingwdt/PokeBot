@@ -1,8 +1,10 @@
 const Command = require("../../base/Command");
 
 const { SlashCommandBuilder } = require("@discordjs/builders");
-const { MessageEmbed, MessageButton, MessageActionRow } = require("discord.js");
+const { MessageEmbed, MessageButton, MessageActionRow, MessageAttachment } = require("discord.js");
 const Database = require("../../base/Database");
+const { createCanvas } = require("canvas");
+const { loadImage } = require("canvas");
 
 module.exports = new (class Ping extends Command {
   constructor() {
@@ -19,17 +21,27 @@ module.exports = new (class Ping extends Command {
     let button;
     let data = await Database.getUserData(interaction.user.id);
 
-
     if (!data) {
-      interaction
-        .reply({
-          embeds: [
-            embed.setTitle("Getting Started").setDescription(`
-                    Welcome to **PokeBot**! It is time for you to choose your own **starter pokemon**! If you would like to choose your own pokemon just click one of the 3 buttons below. Your options are:
-                    \n  <:Chespin:954865031571472394> **Chespin:** Grass Type Pokemon
-                    \n  <:Fenekin:954865031290437752> **Fenekin:** Fire Type Pokemon
-                    \n  <:Froakie:954865032209002526> **Froakie:** Water Type Pokemon
-                `),
+      const canvas = createCanvas(1920, 1200);
+      const ctx = canvas.getContext("2d");
+      const background = await loadImage("https://wallpapercave.com/wp/wp995451.jpg");
+
+      ctx.drawImage(background, 0, 0, 1965, 1228)
+      const data = canvas.toBuffer();
+
+      const attachment = new MessageAttachment(data, "start.png");
+
+      interaction.reply({
+          // embeds: [
+          //   embed.setTitle("Getting Started").setDescription(`
+          //           Welcome to **PokeBot**! It is time for you to choose your own **starter pokemon**! If you would like to choose your own pokemon just click one of the 3 buttons below. Your options are:
+          //           \n  <:Chespin:954865031571472394> **Chespin:** Grass Type Pokemon
+          //           \n  <:Fenekin:954865031290437752> **Fenekin:** Fire Type Pokemon
+          //           \n  <:Froakie:954865032209002526> **Froakie:** Water Type Pokemon
+          //       `),
+          // ],
+          files: [
+            attachment
           ],
           components: [
             new MessageActionRow().addComponents([

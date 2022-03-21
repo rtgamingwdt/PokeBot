@@ -28,9 +28,9 @@ module.exports = new (class Admin extends Command {
                         .addStringOption((option) =>
                             option
                                 .setName("badge")
-                                .setDescription("The bade you want to give")
+                                .setDescription("The badge you want to give")
                                 .addChoices([
-                                    ["👑Founder", "Founder"],
+                                    ["Founder", "Founder"],
                                     ["Moderator", "Moderator"],
                                     ["Indigo", "Indigo"],
                                     ["Johnto", "Johnto"],
@@ -46,7 +46,25 @@ module.exports = new (class Admin extends Command {
                     option
                         .setName("remove-user-data")
                         .setDescription("Remove user data")
-                        .addUserOption((option) => option.setName("trainer").setDescription("The trainer you want to remove data from").setRequired(true)))
+                        .addUserOption((option) => option.setName("trainer").setDescription("The trainer you want to remove data from").setRequired(true))
+                )
+                .addSubcommand((option) =>
+                    option
+                        .setName("trigger-event")
+                        .setDescription("Trigger an event")
+                        .addStringOption((option) =>
+                            option
+                                .setName("event")
+                                .setDescription("The event to trigger")
+                                .addChoices([
+                                    ["guildMemberAdd", "guildMemberAdd"]
+                                ])
+                        )
+                        .addMentionableOption((option) =>
+                            option
+                                .setName("user")
+                                .setDescription("The user you want to test the event on."))
+                )
         )
     }
 
@@ -74,6 +92,12 @@ module.exports = new (class Admin extends Command {
                         ]
                     })
                 })
+            }
+
+            if (interaction.options.getSubcommand() == "trigger-event") {
+                if (interaction.options.getString("event") == "guildMemberAdd") {
+                    client.emit("guildMemberAdd", interaction.options.getMentionable("user") || interaction.member);
+                }
             }
         } else {
             interaction.reply({

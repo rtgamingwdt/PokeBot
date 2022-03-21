@@ -195,6 +195,7 @@ module.exports = new (class Ping extends Command {
       collector3.on("collect", async (i) => {
         if (i.customId === "AcceptFinalTrade" && i.user.id === interaction.user.id) {
           await Database.tradePokemon(interaction.user.id, interaction.options.getUser("trainer").id, pokemonToTrade[0], pokemonToTrade[1]).then(async () => {
+            console.log(i);
             await interaction.editReply({
               embeds: [
                 new MessageEmbed()
@@ -203,11 +204,12 @@ module.exports = new (class Ping extends Command {
                   .setColor("GREEN")
               ],
               components: []
+            }).then(() => {
+              collector.stop();
+              collector2.stop();
+              collector3.stop();
             });
           })
-          collector.stop();
-          collector2.stop();
-          collector3.stop();
         } else if (i.customId === "DeclineFinalTrade" && i.user.id === interaction.user.id) {
           await interaction.editReply({
             embeds: [
@@ -222,7 +224,7 @@ module.exports = new (class Ping extends Command {
           collector2.stop();
           collector3.stop();
         }
-      })
+      });
     });
   }
 });
