@@ -1202,5 +1202,125 @@
     {
         "name": "Skitty",
         "id": "300"
+    },
+    {
+        "name": "Delcatty",
+        "id": "301"
+    },
+    {
+        "name": "Sableye",
+        "id": "302"
+    },
+    {
+        "name": "Mawile",
+        "id": "303"
+    },
+    {
+        "name": "Aron",
+        "id": "304"
+    },
+    {
+        "name": "Lairon",
+        "id": "305"
+    },
+    {
+        "name": "Aggron",
+        "id": "306"
+    },
+    {
+        "name": "Meditite",
+        "id": "307"
+    },
+    {
+        "name": "Medicham",
+        "id": "308"
+    },
+    {
+        "name": "Electrike",
+        "id": "309"
+    },
+    {
+        "name": "Manectric",
+        "id": "310"
+    },
+    {
+        "name": "Plusle",
+        "id": "311"
+    },
+    {
+        "name": "Minun",
+        "id": "312"
+    }, 
+    {
+        "name": "Volbeat",
+        "id": "313"
+    },
+    {
+        "name": "Illumise",
+        "id": "314"
+    },
+    {
+        "name": "Roselia",
+        "id": "315"
+    },
+    {
+        "name": "Gulpin",
+        "id": "316"
+    },
+    {
+        "name": "Swalot",
+        "id": "317"
+    },
+    {
+        "name": "Carvanha",
+        "id": "318"
+    },
+    {
+        "name": "Sharpedo",
+        "id": "319"
+    },
+    {
+        "name": "Wailmer",
+        "id": "320"
+    },
+    {
+        "name": "Wailord",
+        "id": "321"
+    },
+    {
+        "name": "Numel",
+        "id": "322"
+    },
+    {
+        "name": "Camerupt",
+        "id": "323"
+    },
+    {
+        "name": "Torkoal",
+        "id": "324"
+    },
+    {
+        "name": "Spoink",
+        "id": "325"
+    },
+    {
+        "name": "Grumpig",
+        "id": "326"
+    },
+    {
+        "name": "Spinda",
+        "id": "327"
+    },
+    {
+        "name": "Trapinch",
+        "id": "328"
+    },
+    {
+        "name": "Vibrava",
+        "id": "329"
+    },
+    {
+        "name": "Flygon",
+        "id": "330"
     }
 ]
