@@ -2002,5 +2002,409 @@
     {
         "name": "Emboar",
         "id": "500"
+    },
+    {
+        "name": "Oshawott",
+        "id": "501"
+    },
+    {
+        "name": "Dewott",
+        "id": "502"
+    },
+    {
+        "name": "Samurott",
+        "id": "503"
+    },
+    {
+        "name": "Patrat",
+        "id": "504"
+    },
+    {
+        "name": "Watchog",
+        "id": "505"
+    },
+    {
+        "name": "Lillipup",
+        "id": "506"
+    },
+    {
+        "name": "Herdier",
+        "id": "507"
+    },
+    {
+        "name": "Stoutland",
+        "id": "508"
+    },
+    {
+        "name": "Purrloin",
+        "id": "509"
+    },
+    {
+        "name": "Liepard",
+        "id": "510"
+    },
+    {
+        "name": "Pansage",
+        "id": "511"
+    },
+    {
+        "name": "Simisage",
+        "id": "512"
+    },
+    {
+        "name": "Pansear",
+        "id": "513"
+    },
+    {
+        "name": "Simisear",
+        "id": "514"
+    },
+    {
+        "name": "Panpour",
+        "id": "515"
+    },
+    {
+        "name": "Simipour",
+        "id": "516"
+    },
+    {
+        "name": "Munna",
+        "id": "517"
+    },
+    {
+        "name": "Musharna",
+        "id": "518"
+    },
+    {
+        "name": "Pidove",
+        "id": "519"
+    },
+    {
+        "name": "Tranquill",
+        "id": "520"
+    },
+    {
+        "name": "Unfezant",
+        "id": "521"
+    },
+    {
+        "name": "Blitzle",
+        "id": "522"
+    },
+    {
+        "name": "Zebstrika",
+        "id": "523"
+    },
+    {
+        "name": "Roggenrola",
+        "id": "524"
+    },
+    {
+        "name": "Boldore",
+        "id": "525"
+    },
+    {
+        "name": "Gigalith",
+        "id": "526"
+    },
+    {
+        "name": "Woobat",
+        "id": "527"
+    },
+    {
+        "name": "Swoobat",
+        "id": "528"
+    },
+    {
+        "name": "Drilbur",
+        "id": "529"
+    },
+    {
+        "name": "Excadrill",
+        "id": "530"
+    },
+    {
+        "name": "Audino",
+        "id": "531"
+    },
+    {
+        "name": "Timburr",
+        "id": "532"
+    },
+    {
+        "name": "Gurdurr",
+        "id": "533"
+    },
+    {
+        "name": "Conkeldurr",
+        "id": "534"
+    },
+    {
+        "name": "Tympole",
+        "id": "535"
+    },
+    {
+        "name": "Palpitoad",
+        "id": "536"
+    },
+    {
+        "name": "Seismitoad",
+        "id": "537"
+    },
+    {
+        "name": "Throh",
+        "id": "538"
+    },
+    {
+        "name": "Sawk",
+        "id": "539"
+    },
+    {
+        "name": "Sewaddle",
+        "id": "540"
+    },
+    {
+        "name": "Swadloon",
+        "id": "541"
+    },
+    {
+        "name": "Leavanny",
+        "id": "542"
+    },
+    {
+        "name": "Venipede",
+        "id": "543"
+    },
+    {
+        "name": "Whirlipede",
+        "id": "544"
+    },
+    {
+        "name": "Scolipede",
+        "id": "545"
+    },
+    {
+        "name": "Cottonee",
+        "id": "546"
+    },
+    {
+        "name": "Whimsicott",
+        "id": "547"
+    },
+    {
+        "name": "Petilil",
+        "id": "548"
+    },
+    {
+        "name": "Lilligant",
+        "id": "549"
+    },
+    {
+        "name": "Basculin",
+        "id": "550"
+    },
+    {
+        "name": "Sandile",
+        "id": "551"
+    },
+    {
+        "name": "Krokorok",
+        "id": "552"
+    },
+    {
+        "name": "Krookodile",
+        "id": "553"
+    },
+    {
+        "name": "Darumaka",
+        "id": "554"
+    },
+    {
+        "name": "Darmanitan",
+        "id": "555"
+    },
+    {
+        "name": "Maractus",
+        "id": "556"
+    },
+    {
+        "name": "Dwebble",
+        "id": "557"
+    },
+    {
+        "name": "Crustle",
+        "id": "558"
+    },
+    {
+        "name": "Scraggy",
+        "id": "559"
+    },
+    {
+        "name": "Scrafty",
+        "id": "560"
+    },
+    {
+        "name": "Sigilyph",
+        "id": "561"
+    },
+    {
+        "name": "Yamask",
+        "id": "562"
+    },
+    {
+        "name": "Cofagrigus",
+        "id": "563"
+    },
+    {
+        "name": "Tirtouga",
+        "id": "564"
+    },
+    {
+        "name": "Carracosta",
+        "id": "565"
+    },
+    {
+        "name": "Archen",
+        "id": "566"
+    },
+    {
+        "name": "Archeops",
+        "id": "567"
+    },
+    {
+        "name": "Trubbish",
+        "id": "568"
+    },
+    {
+        "name": "Garbodor",
+        "id": "569"
+    },
+    {
+        "name": "Zorua",
+        "id": "570"
+    },
+    {
+        "name": "Zoroark",
+        "id": "571"
+    },
+    {
+        "name": "Minccino",
+        "id": "572"
+    },
+    {
+        "name": "Cinccino",
+        "id": "573"
+    },
+    {
+        "name": "Gothita",
+        "id": "574"
+    },
+    {
+        "name": "Gothorita",
+        "id": "575"
+    },
+    {
+        "name": "Gothitelle",
+        "id": "576"
+    },
+    {
+        "name": "Solosis",
+        "id": "577"
+    },
+    {
+        "name": "Duosion",
+        "id": "578"
+    },
+    {
+        "name": "Reuniclus",
+        "id": "579"
+    },
+    {
+        "name": "Ducklett",
+        "id": "580"
+    },
+    {
+        "name": "Swanna",
+        "id": "581"
+    },
+    {
+        "name": "Vanillite",
+        "id": "582"
+    },
+    {
+        "name": "Vanillish",
+        "id": "583"
+    },
+    {
+        "name": "Vanilluxe",
+        "id": "584"
+    },
+    {
+        "name": "Deerling",
+        "id": "585"
+    },
+    {
+        "name": "Sawsbuck",
+        "id": "586"
+    },
+    {
+        "name": "Emolga",
+        "id": "587"
+    },
+    {
+        "name": "Karrablast",
+        "id": "588"
+    },
+    {
+        "name": "Escavalier",
+        "id": "589"
+    },
+    {
+        "name": "Foongus",
+        "id": "590"
+    },
+    {
+        "name": "Amoonguss",
+        "id": "591"
+    },
+    {
+        "name": "Frillish",
+        "id": "592"
+    },
+    {
+        "name": "Jellicent",
+        "id": "593"
+    },
+    {
+        "name": "Alomomola",
+        "id": "594"
+    },
+    {
+        "name": "Joltik",
+        "id": "595"
+    },
+    {
+        "name": "Galvantula",
+        "id": "596"
+    },
+    {
+        "name": "Ferroseed",
+        "id": "597"
+    },
+    {
+        "name": "Ferrothorn",
+        "id": "598"
+    },
+    {
+        "name": "Klink",
+        "id": "599"
+    },
+    {
+        "name": "Klang",
+        "id": "600"
+    },
+    {
+        "name": "Klinklang",
+        "id": "601"
     }
 ]
