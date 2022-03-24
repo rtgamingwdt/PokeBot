@@ -2454,5 +2454,193 @@
     {
         "name": "Cubchoo",
         "id": "613"
+    },
+    {
+        "name": "Beartic",
+        "id": "614"
+    },
+    {
+        "name": "Cryogonal",
+        "id": "615"
+    },
+    {
+        "name": "Shelmet",
+        "id": "616"
+    },
+    {
+        "name": "Accelgor",
+        "id": "617"
+    },
+    {
+        "name": "Stunfisk",
+        "id": "618"
+    },
+    {
+        "name": "Mienfoo",
+        "id": "619"
+    },
+    {
+        "name": "Mienshao",
+        "id": "620"
+    },
+    {
+        "name": "Druddigon",
+        "id": "621"
+    },
+    {
+        "name": "Golett",
+        "id": "622"
+    },
+    {
+        "name": "Golurk",
+        "id": "623"
+    },
+    {
+        "name": "Pawniard",
+        "id": "624"
+    },
+    {
+        "name": "Bisharp",
+        "id": "625"
+    },
+    {
+        "name": "Bouffalant",
+        "id": "626"
+    },
+    {
+        "name": "Rufflet",
+        "id": "627"
+    },
+    {
+        "name": "Braviary",
+        "id": "628"
+    },
+    {
+        "name": "Vullaby",
+        "id": "629"
+    },
+    {
+        "name": "Mandibuzz",
+        "id": "630"
+    },
+    {
+        "name": "Heatmor",
+        "id": "631"
+    },
+    {
+        "name": "Durant",
+        "id": "632"
+    },
+    {
+        "name": "Deino",
+        "id": ""633
+    },
+    {
+        "name": "Zweilous",
+        "id": "634"
+    },
+    {
+        "name": "Hydreigon",
+        "id": "635"
+    },
+    {
+        "name": "Larvesta",
+        "id": "636"
+    },
+    {
+        "name": "Volcarona",
+        "id": "637"
+    },
+    {
+        "name": "Cobalion",
+        "id": "638"
+    },
+    {
+        "name": "Terrakion",
+        "id": "639"
+    },
+    {
+        "name": "Virizion",
+        "id": "640"
+    },
+    {
+        "name": "Tornadus",
+        "id": "641"
+    },
+    {
+        "name": "Thundurus",
+        "id": "642"
+    },
+    {
+        "name": "Reshiram",
+        "id": "643"
+    },
+    {
+        "name": "Zekrom",
+        "id": "644"
+    },
+    {
+        "name": "Landorus",
+        "id": "645"
+    },
+    {
+        "name": "Kyurem",
+        "id": "646"
+    },
+    {
+        "name": "Keldeo",
+        "id": "647"
+    },
+    {
+        "name": "Meloetta",
+        "id": "648"
+    },
+    {
+        "name": "Genesect",
+        "id": "649"
+    },
+    {
+        "name": "Chespin",
+        "id": "650"
+    },
+    {
+        "name": "Quilladin",
+        "id": "651"
+    },
+    {
+        "name": "Chesnaught",
+        "id": "652"
+    },
+    {
+        "name": "Fennekin",
+        "id": "653"
+    },
+    {
+        "name": "Braixen",
+        "id": "654"
+    },
+    {
+        "name": "Delphox",
+        "id": "655"
+    },
+    {
+        "name": "Froakie",
+        "id": "656"
+    },
+    {
+        "name": "Frogadier",
+        "id": "657"
+    },
+    {
+        "name": "Greninja",
+        "id": "658"
+    },
+    {
+        "name": "Bunnelby",
+        "id": "659"
+    },
+    {
+        "name": "Diggersby",
+        "id": "660"
     }
 ]
