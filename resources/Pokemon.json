@@ -1722,5 +1722,285 @@
     {
         "name": "Honchkrow",
         "id": "430"
+    },
+    {
+        "name": "Glameow",
+        "id": "431"
+    },
+    {
+        "name": "Purugly",
+        "id": "432"
+    },
+    {
+        "name": "Chingling",
+        "id": "433"
+    },
+    {
+        "name": "Stunky",
+        "id": "434"
+    },
+    {
+        "name": "Skuntank",
+        "id": "435"
+    },
+    {
+        "name": "Bronzor",
+        "id": "436"
+    },
+    {
+        "name": "Bronzong",
+        "id": "437"
+    },
+    {
+        "name": "Bonsly",
+        "id": "438"
+    },
+    {
+        "name": "Mime Jr.",
+        "id": "439"
+    },
+    {
+        "name": "Happiny",
+        "id": "440"
+    },
+    {
+        "name": "Chatot",
+        "id": "441"
+    },
+    {
+        "name": "Spiritomb",
+        "id": "442"
+    },
+    {
+        "name": "Gible",
+        "id": "443"
+    },
+    {
+        "name": "Gabite",
+        "id": "444"
+    },
+    {
+        "name": "Garchomp",
+        "id": "445"
+    },
+    {
+        "name": "Munchlax",
+        "id": "446"
+    },
+    {
+        "name": "Riolu",
+        "id": "447"
+    },
+    {
+        "name": "Lucario",
+        "id": "448"
+    },
+    {
+        "name": "Hippopotas",
+        "id": "449"
+    },
+    {
+        "name": "Hippowdon",
+        "id": "450"
+    },
+    {
+        "name": "Skorupi",
+        "id": "451"
+    },
+    {
+        "name": "Drapion",
+        "id": "452"
+    },
+    {
+        "name": "Croagunk",
+        "id": "453"
+    },
+    {
+        "name": "Toxicroak",
+        "id": "454"
+    },
+    {
+        "name": "Carnivine",
+        "id": "455"
+    },
+    {
+        "name": "Finneon",
+        "id": "456"
+    },
+    {
+        "name": "Lumineon",
+        "id": "457"
+    },
+    {
+        "name": "Mantyke",
+        "id": "458"
+    },
+    {
+        "name": "Snover",
+        "id": "459"
+    },
+    {
+        "name": "Abomasnow",
+        "id": "460"
+    },
+    {
+        "name": "Weavile",
+        "id": "461"
+    },
+    {
+        "name": "Magnezone",
+        "id": "462"
+    },
+    {
+        "name": "Lickilicky",
+        "id": "463"
+    },
+    {
+        "name": "Rhyperior",
+        "id": "464"
+    },
+    {
+        "name": "Tangrowth",
+        "id": "465"
+    },
+    {
+        "name": "Electivire",
+        "id": "466"
+    },
+    {
+        "name": "Magmortar",
+        "id": "467"
+    },
+    {
+        "name": "Togekiss",
+        "id": "468"
+    },
+    {
+        "name": "Yanmega",
+        "id": "469"
+    },
+    {
+        "name": "Leafeon",
+        "id": "470"
+    },
+    {
+        "name": "Glaceon",
+        "id": "471"
+    },
+    {
+        "name": "Gliscor",
+        "id": "472"
+    },
+    {
+        "name": "Mamoswine",
+        "id": "473"
+    },
+    {
+        "name": "Porygon-Z",
+        "id": "474"
+    },
+    {
+        "name": "Gallade",
+        "id": "475"
+    },
+    {
+        "name": "Probopass",
+        "id": "476"
+    },
+    {
+        "name": "Dusknoir",
+        "id": "477"
+    },
+    {
+        "name": "Froslass",
+        "id": "478"
+    },
+    {
+        "name": "Rotom",
+        "id": "479"
+    },
+    {
+        "name": "Uxie",
+        "id": "480"
+    },
+    {
+        "name": "Mesprit",
+        "id": "481"
+    },
+    {
+        "name": "Azelf",
+        "id": "482"
+    },
+    {
+        "name": "Dialga",
+        "id": "483"
+    },
+    {
+        "name": "Palkia",
+        "id": "484"
+    },
+    {
+        "name": "Heatran",
+        "id": "485"
+    },
+    {
+        "name": "Regigigas",
+        "id": "486"
+    },
+    {
+        "name": "Giratina",
+        "id": "487"
+    },
+    {
+        "name": "Cresselia",
+        "id": "488"
+    },
+    {
+        "name": "Phione",
+        "id": "489"
+    },
+    {
+        "name": "Manaphy",
+        "id": "490"
+    },
+    {
+        "name": "Darkrai",
+        "id": "491"
+    },
+    {
+        "name": "Shaymin",
+        "id": "492"
+    },
+    {
+        "name": "Arceus",
+        "id": "493"
+    },
+    {
+        "name": "Victini",
+        "id": "494"
+    },
+    {
+        "name": "Snivy",
+        "id": "495"
+    },
+    {
+        "name": "Servine",
+        "id": "496"
+    },
+    {
+        "name": "Serperior",
+        "id": "497"
+    },
+    {
+        "name": "Tepig",
+        "id": "498"
+    },
+    {
+        "name": "Pignite",
+        "id": "499"
+    },
+    {
+        "name": "Emboar",
+        "id": "500"
     }
 ]
