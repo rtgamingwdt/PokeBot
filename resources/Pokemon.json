@@ -2642,5 +2642,165 @@
     {
         "name": "Diggersby",
         "id": "660"
+    },
+    {
+        "name": "Fletchling",
+        "id": "661"
+    },
+    {
+        "name": "Fletchinder",
+        "id": "662"
+    },
+    {
+        "name": "Talonflame",
+        "id": "663"
+    },
+    {
+        "name": "Scatterbug",
+        "id": "664"
+    },
+    {
+        "name": "Spewpa",
+        "id": "665"
+    },
+    {
+        "name": "Vivillon",
+        "id": "666"
+    },
+    {
+        "name": "Litleo",
+        "id": "667"
+    },
+    {
+        "name": "Pyroar",
+        "id": "668"
+    },
+    {
+        "name": "Flabebe",
+        "id": "669"
+    },
+    {
+        "name": "Floette",
+        "id": "670"
+    },
+    {
+        "name": "Florges",
+        "id": "671"
+    },
+    {
+        "name": "Skiddo",
+        "id": "672"
+    },
+    {
+        "name": "Gogoat",
+        "id": "673"
+    },
+    {
+        "name": "Pancham",
+        "id": "674"
+    },
+    {
+        "name": "Pangoro",
+        "id": "675"
+    },
+    {
+        "name": "Furfrou",
+        "id": "676"
+    },
+    {
+        "name": "Espurr",
+        "id": "677"
+    },
+    {
+        "name": "Meowstic",
+        "id": "678"
+    },
+    {
+        "name": "Honedge",
+        "id": "679"
+    },
+    {
+        "name": "Doublade",
+        "id": "680"
+    },
+    {
+        "name": "Aegislash",
+        "id": "681"
+    },
+    {
+        "name": "Spritzee",
+        "id": "682"
+    },
+    {
+        "name": "Aromatisse",
+        "id": "683"
+    },
+    {
+        "name": "Swirlix",
+        "id": "684"
+    },
+    {
+        "name": "Slurpuff",
+        "id": "685"
+    },
+    {
+        "name": "Inkay",
+        "id": "686"
+    },
+    {
+        "name": "Malamar",
+        "id": "687"
+    },
+    {
+        "name": "Binacle",
+        "id": "688"
+    },
+    {
+        "name": "Barbaracle",
+        "id": "689"
+    },
+    {
+        "name": "Skrelp",
+        "id": "690"
+    },
+    {
+        "name": "Dragalge",
+        "id": "691"
+    },
+    {
+        "name": "Clauncher",
+        "id": "692"
+    },
+    {
+        "name": "Clawitzer",
+        "id": "693"
+    },
+    {
+        "name": "Helioptile",
+        "id": "694"
+    },
+    {
+        "name": "Heliolisk",
+        "id": "695"
+    },
+    {
+        "name": "Tyrunt",
+        "id": "696"
+    },
+    {
+        "name": "Tyrantrum",
+        "id": "697"
+    },
+    {
+        "name": "Amaura",
+        "id": "698"
+    },
+    {
+        "name": "Aurorus",
+        "id": "699"
+    },
+    {
+        "name": "Sylveon",
+        "id": "700"
     }
 ]
