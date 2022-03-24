@@ -2406,5 +2406,53 @@
     {
         "name": "Klinklang",
         "id": "601"
+    },
+    {
+        "name": "Tynamo",
+        "id": "602"
+    },
+    {
+        "name": "Eelektrik",
+        "id": "603"
+    },
+    {
+        "name": "Eelektross",
+        "id": "604"
+    },
+    {
+        "name": "Elgyem",
+        "id": "605"
+    },
+    {
+        "name": "Beheeyem",
+        "id": "606"
+    },
+    {
+        "name": "Litwick",
+        "id": "607"
+    },
+    {
+        "name": "Lampent",
+        "id": "608"
+    },
+    {
+        "name": "Chandelure",
+        "id": "609"
+    },
+    {
+        "name": "Axew",
+        "id": "610"
+    },
+    {
+        "name": "Fraxure",
+        "id": "611"
+    },
+    {
+        "name": "Haxorus",
+        "id": "612"
+    },
+    {
+        "name": "Cubchoo",
+        "id": "613"
     }
 ]
