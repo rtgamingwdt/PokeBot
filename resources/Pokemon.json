@@ -2802,5 +2802,245 @@
     {
         "name": "Sylveon",
         "id": "700"
+    },
+    {
+        "name": "Hawlucha",
+        "id": "701"
+    },
+    {
+        "name": "Dedenne",
+        "id": "702"
+    },
+    {
+        "name": "Carbink",
+        "id": "703"
+    },
+    {
+        "name": "Goomy",
+        "id": "704"
+    },
+    {
+        "name": "Sliggoo",
+        "id": "705"
+    },
+    {
+        "name": "Goodra",
+        "id": "706"
+    },
+    {
+        "name": "Klefki",
+        "id": "707"
+    },
+    {
+        "name": "Phantump",
+        "id": "708"
+    },
+    {
+        "name": "Trevenant",
+        "id": "709"
+    },
+    {
+        "name": "Pumpkaboo",
+        "id": "710"
+    },
+    {
+        "name": "Gourgeist",
+        "id": "711"
+    },
+    {
+        "name": "Bergmite",
+        "id": "712"
+    },
+    {
+        "name": "Avalugg",
+        "id": "713"
+    },
+    {
+        "name": "Noibat",
+        "id": "714"
+    },
+    {
+        "name": "Noivern",
+        "id": "715"
+    },
+    {
+        "name": "Xerneas",
+        "id": "716"
+    },
+    {
+        "name": "Yveltal",
+        "id": "717"
+    },
+    {
+        "name": "Zygarde",
+        "id": "718"
+    },
+    {
+        "name": "Diancie",
+        "id": "719"
+    },
+    {
+        "name": "Hoopa",
+        "id": "720"
+    },
+    {
+        "name": "Volcanion",
+        "id": "721"
+    },
+    {
+        "name": "Rowlet",
+        "id": "722"
+    },
+    {
+        "name": "Dartrix",
+        "id": "723"
+    },
+    {
+        "name": "Decidueye",
+        "id": "724"
+    },
+    {
+        "name": "Litten",
+        "id": "725"
+    },
+    {
+        "name": "Torracat",
+        "id": "726"
+    },
+    {
+        "name": "Incineroar",
+        "id": "727"
+    },
+    {
+        "name": "Popplio",
+        "id": "728"
+    },
+    {
+        "name": "Brionne",
+        "id": "729"
+    },
+    {
+        "name": "Primarina",
+        "id": "730"
+    },
+    {
+        "name": "Pikipek",
+        "id": "731"
+    },
+    {
+        "name": "Trumbeak",
+        "id": "732"
+    },
+    {
+        "name": "Toucannon",
+        "id": "733"
+    },
+    {
+        "name": "Yungoos",
+        "id": "734"
+    },
+    {
+        "name": "Gumshoos",
+        "id": "735"
+    },
+    {
+        "name": "Grubbin",
+        "id": "736"
+    },
+    {
+        "name": "Charjabug",
+        "id": "737"
+    },
+    {
+        "name": "Vikavolt",
+        "id": "738"
+    },
+    {
+        "name": "Crabrawler",
+        "id": "739"
+    },
+    {
+        "name": "Crabominable",
+        "id": "740"
+    },
+    {
+        "name": "Oricorio",
+        "id": "741"
+    },
+    {
+        "name": "Cutiefly",
+        "id": "742"
+    },
+    {
+        "name": "Ribombee",
+        "id": "743"
+    },
+    {
+        "name": "Rockruff",
+        "id": "744"
+    },
+    {
+        "name": "Lycanroc",
+        "id": "745"
+    },
+    {
+        "name": "Wishiwashi",
+        "id": "746"
+    },
+    {
+        "name": "Mareanie",
+        "id": "747"
+    },
+    {
+        "name": "Toxapex",
+        "id": "748"
+    },
+    {
+        "name": "Mudbray",
+        "id": "749"
+    },
+    {
+        "name": "Mudsdale",
+        "id": "750"
+    },
+    {
+        "name": "Dewpider",
+        "id": "751"
+    },
+    {
+        "name": "Araquanid",
+        "id": "752"
+    },
+    {
+        "name": "Fomantis",
+        "id": "753"
+    },
+    {
+        "name": "Lurantis",
+        "id": "754"
+    },
+    {
+        "name": "Morelull",
+        "id": "755"
+    },
+    {
+        "name": "Shiinotic",
+        "id": "756"
+    },
+    {
+        "name": "Salandit",
+        "id": "757"
+    },
+    {
+        "name": "Salazzle",
+        "id": "758"
+    },
+    {
+        "name": "Stufful",
+        "id": "759"
+    },
+    {
+        "name": "Bewear",
+        "id": "760"
     }
 ]
