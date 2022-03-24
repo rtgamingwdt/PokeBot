@@ -46,22 +46,22 @@ module.exports = new (class Ping extends Command {
           components: [
             new MessageActionRow().addComponents([
               new MessageButton()
-                .setCustomId("chespin")
+                .setCustomId("941785047692898354-chespin")
                 .setStyle("SUCCESS")
                 .setLabel("Chespin")
                 .setEmoji("954865031571472394"),
               new MessageButton()
-                .setCustomId("fennekin")
+                .setCustomId("941785047692898354-fennekin")
                 .setStyle("DANGER")
                 .setLabel("Fennekin")
                 .setEmoji("954865031290437752"),
               new MessageButton()
-                .setCustomId("froakie")
+                .setCustomId("941785047692898354-froakie")
                 .setStyle("PRIMARY")
                 .setLabel("Froakie")
                 .setEmoji("954865032209002526"),
               new MessageButton()
-                .setCustomId("Cancel")
+                .setCustomId("941785047692898354-Cancel")
                 .setStyle("SECONDARY")
                 .setLabel("Cancel")
                 .setEmoji("❌")
@@ -70,38 +70,38 @@ module.exports = new (class Ping extends Command {
         })
         .then((msg) => {
           const filter = (i) =>
-            (i.customId === "chespin" && i.user.id === interaction.user.id) ||
-            (i.customId === "fennekin" && i.user.id === interaction.user.id) ||
-            (i.customId === "froakie" && i.user.id === interaction.user.id) ||
-            (i.customId == "Cancel") && i.user.id === interaction.user.id;
+            (i.customId === "941785047692898354-chespin" && i.user.id === interaction.user.id) ||
+            (i.customId === "941785047692898354-fennekin" && i.user.id === interaction.user.id) ||
+            (i.customId === "941785047692898354-froakie" && i.user.id === interaction.user.id) ||
+            (i.customId == "941785047692898354-Cancel") && i.user.id === interaction.user.id;
           let pokename;
           const collector = interaction.channel.createMessageComponentCollector(
             { filter, time: 10000 }
           );
 
           collector.on("collect", async (i) => {
-            if (i.customId === "chespin") {
+            if (i.customId === "941785047692898354-chespin") {
               await interaction.editReply({
                 embeds: [new MessageEmbed().setTitle("Chespin")],
                 components: [],
               });
               await Database.createUserData(interaction.user.id, "chespin");
               collector.stop();
-            } else if (i.customId === "fennekin") {
+            } else if (i.customId === "941785047692898354-fennekin") {
               await interaction.editReply({
                 embeds: [new MessageEmbed().setTitle("Fennekin")],
                 components: [],
               });
               await Database.createUserData(interaction.user.id, "fennekin");
               collector.stop();
-            } else if (i.customId === "froakie") {
+            } else if (i.customId === "941785047692898354-froakie") {
               await interaction.editReply({
                 embeds: [new MessageEmbed().setTitle("Froakie")],
                 components: [],
               });
               await Database.createUserData(interaction.user.id, "froakie");
               collector.stop();
-            } else if (i.customId === "Cancel") {
+            } else if (i.customId === "941785047692898354-Cancel") {
               await interaction.editReply({
                 embeds: [
                   new MessageEmbed()

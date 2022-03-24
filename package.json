@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/Main.js",
   "scripts": {
-    "test": "nodemon .",
+    "test": "npm i && nodemon .",
     "start": "node ."
   },
   "keywords": [],
