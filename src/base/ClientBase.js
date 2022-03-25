@@ -4,7 +4,7 @@ const { config } = require("dotenv");
 
 const { connect } = require("mongoose");
 
-const chalk = require("chalk"); // you cant´require chalk like that you need to use imports cause of ESM
+const chalk = require("chalk");
 
 const { readdirSync } = require("fs");
 

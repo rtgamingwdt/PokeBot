@@ -7,4 +7,5 @@ const website = new Website();
 client.build();
 website.build();
 
-module.exports = client;
+module.exports.client = client;
+module.exports.website = website;

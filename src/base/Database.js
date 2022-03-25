@@ -32,14 +32,14 @@ module.exports = class Database {
   }
 
   static getPokemon(query) {
-    if(!(isNaN(query))) {
-      if(!(query.startsWith("00")) && parseInt(query) < 10) {
-        query = "00" + `${query.replaceAll("0", "")}`;
-      } else if(!(query.startsWith("0")) && parseInt(query) < 100) {
-        query = "0" + `${query.replaceAll("0", "")}`;
-      }
+    let data;
+
+    if(isNaN(query)) {
+      data = pokemon.find((p) => p.name === `${query}` || p.id === `${query}`)
+    } else {
+      data = pokemon[parseInt(query)];
     }
-    let data = pokemon.find((p) => p.name === `${query}` || p.id === `${query}`)
+    // let data = pokemon.find((p) => p.name === `${query}` || p.id === `${query}`)
 
     if(!data) data = pokemon[0];
 
@@ -61,7 +61,7 @@ module.exports = class Database {
 
   static getRandomPokemon() {
     
-    const index = Math.floor(Math.random() * ((100 - 1) - 1 + 1) + 1);
+    const index = Math.floor(Math.random() * ((250 - 1) - 1 + 1) + 1);
     
     const data = pokemon[index];
 
