@@ -31,9 +31,32 @@ module.exports = class Database {
     return data;
   }
 
-  static async getPokemon(name) {
-    const data = await get(`https://pokeapi.co/api/v2/pokemon/${name}`);
-    return data;
+  static getPokemon(query) {
+    if(!(isNaN(query))) {
+      if(!(query.startsWith("00")) && parseInt(query) < 10) {
+        query = "00" + `${query.replaceAll("0", "")}`;
+      } else if(!(query.startsWith("0")) && parseInt(query) < 100) {
+        query = "0" + `${query.replaceAll("0", "")}`;
+      }
+    }
+    let data = pokemon.find((p) => p.name === `${query}` || p.id === `${query}`)
+
+    if(!data) data = pokemon[0];
+
+    if(!data.forms) data.forms = [
+      null,
+      null
+    ]
+
+    console.log(data);
+    
+    const formIndex = Math.floor(Math.random() * (1 - 0 + 1) + 0);
+
+    return {
+      "name": `${data.name}`,
+      "id": `${data.id}`,
+      "form": `${data.forms[formIndex]}`
+    }
   }
 
   static getRandomPokemon() {
@@ -42,15 +65,17 @@ module.exports = class Database {
     
     const data = pokemon[index];
 
-    const formIndex = Math.floor(Math.random() * (1 - 0 + 1) + 0);
+    // const formIndex = Math.floor(Math.random() * (1 - 0 + 1) + 0);
     
-    console.log(formIndex)
+    // console.log(formIndex)
 
-    return {
-      "name": `${data.name}`,
-      "id": `${data.id}`,
-      "form": `${data.forms[formIndex]}`
-    }
+    // return {
+    //   "name": `${data.name}`,
+    //   "id": `${data.id}`,
+    //   "form": `${data.forms[formIndex]}`
+    // }
+
+    return this.getPokemon(`${data.name}`)
   }
 
   static async givePokemon(id, name) {
