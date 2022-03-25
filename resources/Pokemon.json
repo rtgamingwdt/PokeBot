@@ -2009,203 +2009,403 @@
     },
     {
         "name": "Celebi",
-        "id": "251"
+        "id": "251",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/251.png",
+            "https://www.serebii.net/Shiny/SWSH/251.png"
+        ]
     },
     {
         "name": "Treecko",
-        "id": "252"
+        "id": "252",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/252.png",
+            "https://www.serebii.net/Shiny/SWSH/252.png"
+        ]
     },
     {
         "name": "Grovyle",
-        "id": "253"
+        "id": "253",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/253.png",
+            "https://www.serebii.net/Shiny/SWSH/253.png"
+        ]
     },
     {
         "name": "Sceptile",
-        "id": "254"
+        "id": "254",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/254.png",
+            "https://www.serebii.net/Shiny/SWSH/254.png"
+        ]
     },
     {
         "name": "Torchic",
-        "id": "255"
+        "id": "255",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/255.png",
+            "https://www.serebii.net/Shiny/SWSH/255.png"
+        ]
     },
     {
         "name": "Combusken",
-        "id": "256"
+        "id": "256",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/256.png",
+            "https://www.serebii.net/Shiny/SWSH/256.png"
+        ]
     },
     {
         "name": "Blaziken",
-        "id": "257"
+        "id": "257",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/257.png",
+            "https://www.serebii.net/Shiny/SWSH/257.png"
+        ]
     },
     {
         "name": "Mudkip",
-        "id": "258"
+        "id": "258",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/258.png",
+            "https://www.serebii.net/Shiny/SWSH/258.png"
+        ]
     },
     {
         "name": "Marshtomp",
-        "id": "259"
+        "id": "259",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/259.png",
+            "https://www.serebii.net/Shiny/SWSH/259.png"
+        ]
     },
     {
         "name": "Swampert",
-        "id": "260"
+        "id": "260",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/260.png",
+            "https://www.serebii.net/Shiny/SWSH/260.png"
+        ]
     },
     {
         "name": "Poochyena",
-        "id": "261"
+        "id": "261",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/261.png",
+            "https://www.serebii.net/Shiny/SWSH/261.png"
+        ]
     },
     {
         "name": "Mightyena",
-        "id": "262"
+        "id": "262",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/262.png",
+            "https://www.serebii.net/Shiny/SWSH/262.png"
+        ]
     },
     {
         "name": "Zigzagoon",
-        "id": "263"
+        "id": "263",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/263.png",
+            "https://www.serebii.net/Shiny/SWSH/263.png"
+        ]
     },
     {
         "name": "Linoone",
-        "id": "264"
+        "id": "264",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/264.png",
+            "https://www.serebii.net/Shiny/SWSH/264.png"
+        ]
     },
     {
         "name": "Wurmple",
-        "id": "265"
+        "id": "265",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/265.png",
+            "https://www.serebii.net/Shiny/SWSH/265.png"
+        ]
     },
     {
         "name": "Silcoon",
-        "id": "266"
+        "id": "266",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/266.png",
+            "https://www.serebii.net/Shiny/SWSH/266.png"
+        ]
     },
     {
         "name": "Beautifly",
-        "id": "267"
+        "id": "267",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/267.png",
+            "https://www.serebii.net/Shiny/SWSH/267.png"
+        ]
     },
     {
         "name": "Cascoon",
-        "id": "268"
+        "id": "268",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/268.png",
+            "https://www.serebii.net/Shiny/SWSH/268.png"
+        ]
     },
     {
         "name": "Dustox",
-        "id": "269"
+        "id": "269",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/269.png",
+            "https://www.serebii.net/Shiny/SWSH/269.png"
+        ]
     },
     {
         "name": "Lotad",
-        "id": "270"
+        "id": "270",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/270.png",
+            "https://www.serebii.net/Shiny/SWSH/270.png"
+        ]
     },
     {
         "name": "Lombre",
-        "id": "271"
+        "id": "271",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/271.png",
+            "https://www.serebii.net/Shiny/SWSH/271.png"
+        ]
     },
     {
         "name": "Ludicolo",
-        "id": "272"
+        "id": "272",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/272.png",
+            "https://www.serebii.net/Shiny/SWSH/272.png"
+        ]
     },
     {
         "name": "Seedot",
-        "id": "273"
+        "id": "273",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/273.png",
+            "https://www.serebii.net/Shiny/SWSH/273.png"
+        ]
     },
     {
         "name": "Nuzleaf",
-        "id": "274"
+        "id": "274",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/274.png",
+            "https://www.serebii.net/Shiny/SWSH/274.png"
+        ]
     },
     {
         "name": "Shiftry",
-        "id": "275"
+        "id": "275",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/275.png",
+            "https://www.serebii.net/Shiny/SWSH/275.png"
+        ]
     },
     {
         "name": "Taillow",
-        "id": "276"
+        "id": "276",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/276.png",
+            "https://www.serebii.net/Shiny/SWSH/276.png"
+        ]
     },
     {
         "name": "Swellow",
-        "id": "277"
+        "id": "277",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/277.png",
+            "https://www.serebii.net/Shiny/SWSH/277.png"
+        ]
     },
     {
         "name": "Wingull",
-        "id": "278"
+        "id": "278",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/278.png",
+            "https://www.serebii.net/Shiny/SWSH/278.png"
+        ]
     },
     {
         "name": "Pelipper",
-        "id": "279"
+        "id": "279",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/279.png",
+            "https://www.serebii.net/Shiny/SWSH/279.png"
+        ]
     },
     {
         "name": "Ralts",
-        "id": "280"
+        "id": "280",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/280.png",
+            "https://www.serebii.net/Shiny/SWSH/280.png"
+        ]
     },
     {
         "name": "Kirlia",
-        "id": "281"
+        "id": "281",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/281.png",
+            "https://www.serebii.net/Shiny/SWSH/281.png"
+        ]
     },
     {
         "name": "Gardevoir",
-        "id": "282"
+        "id": "282",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/282.png",
+            "https://www.serebii.net/Shiny/SWSH/282.png"
+        ]
     },
     {
         "name": "Surskit",
-        "id": "283"
+        "id": "283",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/283.png",
+            "https://www.serebii.net/Shiny/SWSH/283.png"
+        ]
     },
     {
         "name": "Masquerain",
-        "id": "284"
+        "id": "284",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/284.png",
+            "https://www.serebii.net/Shiny/SWSH/284.png"
+        ]
     },
     {
         "name": "Shroomish",
-        "id": "285"
+        "id": "285",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/285.png",
+            "https://www.serebii.net/Shiny/SWSH/285.png"
+        ]
     },
     {
         "name": "Breloom",
-        "id": "286"
+        "id": "286",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/286.png",
+            "https://www.serebii.net/Shiny/SWSH/286.png"
+        ]
     },
     {
         "name": "Slakoth",
-        "id": "287"
+        "id": "287",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/287.png",
+            "https://www.serebii.net/Shiny/SWSH/287.png"
+        ]
     },
     {
         "name": "Vigoroth",
-        "id": "288"
+        "id": "288",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/288.png",
+            "https://www.serebii.net/Shiny/SWSH/288.png"
+        ]
     },
     {
         "name": "Slaking",
-        "id": "289"
+        "id": "289",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/289.png",
+            "https://www.serebii.net/Shiny/SWSH/289.png"
+        ]
     },
     {
         "name": "Nincada",
-        "id": "290"
+        "id": "290",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/290.png",
+            "https://www.serebii.net/Shiny/SWSH/290.png"
+        ]
     },
     {
         "name": "Ninjask",
-        "id": "291"
+        "id": "291",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/291.png",
+            "https://www.serebii.net/Shiny/SWSH/291.png"
+        ]
     },
     {
         "name": "Shedinja",
-        "id": "292"
+        "id": "292",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/292.png",
+            "https://www.serebii.net/Shiny/SWSH/292.png"
+        ]
     },
     {
         "name": "Whismur",
-        "id": "293"
+        "id": "293",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/293.png",
+            "https://www.serebii.net/Shiny/SWSH/293.png"
+        ]
     },
     {
         "name": "Loudred",
-        "id": "294"
+        "id": "294",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/294.png",
+            "https://www.serebii.net/Shiny/SWSH/294.png"
+        ]
     },
     {
         "name": "Exploud",
-        "id": "295"
+        "id": "295",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/295.png",
+            "https://www.serebii.net/Shiny/SWSH/295.png"
+        ]
     },
     {
         "name": "Makuhita",
-        "id": "296"
+        "id": "296",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/296.png",
+            "https://www.serebii.net/Shiny/SWSH/296.png"
+        ]
     },
     {
         "name": "Hariyama",
-        "id": "297"
+        "id": "297",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/297.png",
+            "https://www.serebii.net/Shiny/SWSH/297.png"
+        ]
     },
     {
         "name": "Azurill",
-        "id": "298"
+        "id": "298",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/298.png",
+            "https://www.serebii.net/Shiny/SWSH/298.png"
+        ]
     },
     {
         "name": "Nosepass",
-        "id": "299"
+        "id": "299",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/299.png",
+            "https://www.serebii.net/Shiny/SWSH/299.png"
+        ]
     },
     {
         "name": "Skitty",
-        "id": "300"
+        "id": "300",
+        "forms": [
+            "https://www.serebii.net/swordshield/pokemon/300.png",
+            "https://www.serebii.net/Shiny/SWSH/300.png"
+        ]
     },
     {
         "name": "Delcatty",
