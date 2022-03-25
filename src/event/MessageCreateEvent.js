@@ -18,6 +18,8 @@ module.exports = new (class MessageCreate extends Event {
       return;
     const guildData = await Database.getGuildData(message.guild.id);
 
+    if(!guildData) return;
+
     if (guildData.spawns) {
       const chanceOfSpawn = Math.floor(Math.random() * (5 - 1 + 1) + 1);
 
@@ -33,16 +35,17 @@ module.exports = new (class MessageCreate extends Event {
       console.log(chanceOfSpawn);
 
       if (chanceOfSpawn == 5) {
-        const { data } = await Database.getRandomPokemon();
+        const { name, form } = Database.getRandomPokemon();
+
         const channel = client.channels.cache.get(
           await Database.getPokespawnChannel(message.guild.id)
         );
-        
+
         const canvas = createCanvas(700, 700);
         const ctx = canvas.getContext('2d');
         const scenery = await loadImage("https://wallpaperaccess.com/full/3551101.png");
         const dialog = await loadImage("https://cdn.discordapp.com/attachments/954166907089612861/955202334152065024/Dialog_Box.png");
-        const pokemon = await loadImage(`${data.sprites.front_default}`);
+        const pokemon = await loadImage(`${form}`);
 
         ctx.drawImage(scenery, 0, 0, canvas.width, canvas.height);
         ctx.drawImage(dialog, 0, 525, canvas.width, 175);
@@ -50,12 +53,12 @@ module.exports = new (class MessageCreate extends Event {
 
         ctx.font = `bold 20px Sans`;
         ctx.fillStyle = `white`;
-        // ctx.textAlign = "start";
+        ctx.textAlign = "start";
         ctx.shadowBlur = 100;
 
-        ctx.fillText(`\nA wild ${data.name}, has appeared!\nHurry up and type catch before they run away!`, 30, 560);
+        ctx.fillText(`\nA wild ${name}, has appeared!\nHurry up and type catch before they run away!`, 30, 560);
 
-        const attachment = new MessageAttachment(canvas.toBuffer(), `${data.name}.png`);
+        const attachment = new MessageAttachment(canvas.toBuffer(), `${name}.png`);
 
         channel
           .send({
@@ -97,14 +100,14 @@ module.exports = new (class MessageCreate extends Event {
                   said = true;
                   await Database.givePokemon(
                     message.author.id,
-                    `${data.name}`
+                    `${name}`
                   ).then(() => {
                     msg.edit({
                       embeds: [
                         new MessageEmbed()
                           .setTitle("Catch Successful!")
                           .setDescription(
-                            `${m.author.tag}, has caught ${data.name}!`
+                            `${m.author.tag}, has caught ${name}!`
                           )
                           .setColor("GREEN"),
                       ],
@@ -117,7 +120,7 @@ module.exports = new (class MessageCreate extends Event {
                       new MessageEmbed()
                         .setTitle("Catch Failed.")
                         .setDescription(
-                          `${m.author.tag}, failed to catch ${data.name} because it ran away!`
+                          `${m.author.tag}, failed to catch ${name} because it ran away!`
                         )
                         .setColor("RED"),
                     ],
@@ -132,7 +135,7 @@ module.exports = new (class MessageCreate extends Event {
                 msg.edit({
                   embeds: [
                     new MessageEmbed()
-                      .setDescription(`${data.name}, has ran away.`)
+                      .setDescription(`${name}, has ran away.`)
                       .setColor("RED")
                   ]
                 })

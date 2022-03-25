@@ -29,6 +29,8 @@ module.exports = new (class Ready extends Event {
       const index = Math.floor(Math.random() * ((statusList.length - 1) - 0 + 1) + 0);
       const status = statusList[index];
       client.user.setActivity(status);
-    }, 30000)
+    }, 30000);
+
+    console.log(Database.getRandomPokemon());
   }
 })();

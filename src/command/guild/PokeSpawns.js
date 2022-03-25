@@ -84,6 +84,9 @@ module.exports = new (class Ping extends Command {
     if (interaction.options.getSubcommand() == "set") {
       if (interaction.member.permissions.has("MANAGE_CHANNELS")) {
         const guildData = await Database.getGuildData(interaction.guild.id);
+
+        if(!guildData) return interaction.reply("No Data found for this server. Please try kicking the bot and inviting it back!");
+
         if (guildData.channel) {
           await Database.togglePokespawns(
             interaction.guild.id,

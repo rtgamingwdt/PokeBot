@@ -2,6 +2,7 @@ const { get } = require("axios");
 const { load } = require("cheerio");
 const GuildModel = require("../model/GuildModel");
 const UserModel = require("../model/UserModel");
+const pokemon = require("../../resources/Pokemon.json");
 
 module.exports = class Database {
   static async getUserData(id) {
@@ -35,15 +36,21 @@ module.exports = class Database {
     return data;
   }
 
-  static async getRandomPokemon() {
-    const data = await this.getPokemonData();
-    const count = data.results.length;
-    const index = Math.floor(Math.random() * (count - 1));
-    const { name } = data.results[index];
+  static getRandomPokemon() {
+    
+    const index = Math.floor(Math.random() * ((9 - 1) - 1 + 1) + 1);
+    
+    const data = pokemon[index];
 
-    const data2 = await this.getPokemon(name);
+    const formIndex = Math.floor(Math.random() * (1 - 0 + 1) + 0);
+    
+    console.log(formIndex)
 
-    return data2;
+    return {
+      "name": `${data.name}`,
+      "id": `${data.id}`,
+      "form": `${data.forms[formIndex]}`
+    }
   }
 
   static async givePokemon(id, name) {
