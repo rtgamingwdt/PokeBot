@@ -2533,7 +2533,7 @@
     },
     {
         "name": "Deino",
-        "id": ""633
+        "id": "633"
     },
     {
         "name": "Zweilous",
@@ -3042,5 +3042,165 @@
     {
         "name": "Bewear",
         "id": "760"
+    },
+    {
+        "name": "Bounsweet",
+        "id": "761"
+    },
+    {
+        "name": "Steenee",
+        "id": "762"
+    },
+    {
+        "name": "Tsareena",
+        "id": "763"
+    },
+    {
+        "name": "Comfey",
+        "id": "764"
+    },
+    {
+        "name": "Oranguru",
+        "id": "765"
+    },
+    {
+        "name": "Passimian",
+        "id": "766"
+    },
+    {
+        "name": "Wimpod",
+        "id": "767"
+    },
+    {
+        "name": "Golisopod",
+        "id": "768"
+    },
+    {
+        "name": "Sandygast",
+        "id": "769"
+    },
+    {
+        "name": "Palossand",
+        "id": "770"
+    },
+    {
+        "name": "Pyukumuku",
+        "id": "771"
+    },
+    {
+        "name": "Type: Null",
+        "id": "772"
+    },
+    {
+        "name": "Silvally",
+        "id": "773"
+    },
+    {
+        "name": "Minior",
+        "id": "774"
+    },
+    {
+        "name": "Komala",
+        "id": "775"
+    },
+    {
+        "name": "Turtonator",
+        "id": "776"
+    },
+    {
+        "name": "Togedemaru",
+        "id": "777"
+    },
+    {
+        "name": "Mimikyu",
+        "id": "778"
+    },
+    {
+        "name": "Bruxish",
+        "id": "779"
+    },
+    {
+        "name": "Drampa",
+        "id": "780"
+    },
+    {
+        "name": "Dhelmise",
+        "id": "781"
+    },
+    {
+        "name": "Jangmo-o",
+        "id": "782"
+    },
+    {
+        "name": "Hakamo-o",
+        "id": "783"
+    },
+    {
+        "name": "Kommo-o",
+        "id": "784"
+    },
+    {
+        "name": "Tapu Koko",
+        "id": "785"
+    },
+    {
+        "name": "Tapu Lele",
+        "id": "786"
+    },
+    {
+        "name": "Tapu Bulu",
+        "id": "787"
+    },
+    {
+        "name": "Tapu Fini",
+        "id": "788"
+    },
+    {
+        "name": "Cosmog",
+        "id": "789"
+    },
+    {
+        "name": "Cosmoem",
+        "id": "790"
+    },
+    {
+        "name": "Solgaleo",
+        "id": "791"
+    },
+    {
+        "name": "Lunala",
+        "id": "792"
+    },
+    {
+        "name": "Nihilego",
+        "id": "793"
+    },
+    {
+        "name": "Buzzwole",
+        "id": "794"
+    },
+    {
+        "name": "Pheromosa",
+        "id": "795"
+    },
+    {
+        "name": "Xurkitree",
+        "id": "796"
+    },
+    {
+        "name": "Celesteela",
+        "id": "797"
+    },
+    {
+        "name": "Kartana",
+        "id": "798"
+    },
+    {
+        "name": "Guzzlord",
+        "id": "799"
+    },
+    {
+        "name": "Necrozma",
+        "id": "800"
     }
 ]
