@@ -38,7 +38,7 @@ module.exports = class Database {
 
   static getRandomPokemon() {
     
-    const index = Math.floor(Math.random() * ((9 - 1) - 1 + 1) + 1);
+    const index = Math.floor(Math.random() * ((100 - 1) - 1 + 1) + 1);
     
     const data = pokemon[index];
 
